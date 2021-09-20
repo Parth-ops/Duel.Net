@@ -1,0 +1,27 @@
+.App {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    font-size: 1.em;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+    color: blueviolet;
+}
+
+.spacer {
+    aspect-ratio: 300/50;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background: #100e11;
+    width: 100%;
+}
+
+.nope {
+    transform: rotate(180deg);
+}
+
+img {
+    width: 100%;
+}

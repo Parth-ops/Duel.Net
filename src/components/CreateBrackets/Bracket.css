@@ -1,0 +1,39 @@
+label {
+    display: inline-block;
+    padding-bottom: 4%;
+    padding-right: 4%;
+    font-size: 1.5rem;
+    padding-top: 4%;
+}
+
+.buttonfix {
+    padding-top: 4%;
+}
+
+button {
+    border-radius: 50px;
+    background-color: #fddcef;
+}
+
+select {
+    height: 60px;
+    background-color: #ffdcf1;
+    border-radius: 15px;
+}
+
+.inputbox {
+    background-color: #f7d0e7;
+    color: black;
+    border-radius: 15px;
+}
+
+.main {
+    padding-left: 7%;
+    width: 55%;
+    height: 90%;
+    border-radius: 25px;
+    background-color: rgb(20, 20, 20);
+    border-color: blueviolet;
+    border-width: 20px;
+    border-style: solid;
+}
