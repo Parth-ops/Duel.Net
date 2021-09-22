@@ -2,6 +2,7 @@ import React from 'react'
 import Menu from '../Navbar/Menu';
 import axios from 'axios';
 import useEffect from "react";
+import Tiles from "../tiles/Tiles";
 
 let gg;
 function getData(tourdata){
@@ -22,9 +23,11 @@ const Compete = ({updateUser}) => {
                     <Menu updateUser={updateUser}/>
                 </div>
                 <div>
-                <ul>
-                { }
-            </ul>
+                
+                {
+                    gg.map((data, i) => <Tiles cb={data.created_by} noft={data.noft}  key={i}  sys={data.system} tn={data.tourName}/>)
+                }
+
                 </div>
             </div>
         )
