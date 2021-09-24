@@ -1,21 +1,22 @@
 import React from 'react'
 import Menu from '../Navbar/Menu';
 import axios from 'axios';
-import useEffect from "react";
 import Tiles from "../tiles/Tiles";
+import { useState } from 'react';
 
-let gg;
-function getData(tourdata){
-    gg = tourdata
-}
-axios.get("http://localhost:9002/compete").then(res => getData(res.data))
-        
 
-const Compete = ({updateUser}) => {
+
+
+
+
+ 
+ const Compete = ({updateUser}) => {
     
-        
-        console.log(gg)
-   
+    const [gg, setgg] = useState([])
+
+    axios.get("http://localhost:9002/compete").then(res => setgg(res.data))
+    
+
 
         return (
             <div>
@@ -24,8 +25,9 @@ const Compete = ({updateUser}) => {
                 </div>
                 <div>
                 
-                {
+                {   
                     gg.map((data, i) => <Tiles cb={data.created_by} noft={data.noft}  key={i}  sys={data.system} tn={data.tourName}/>)
+                   
                 }
 
                 </div>

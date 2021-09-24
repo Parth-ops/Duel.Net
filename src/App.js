@@ -54,7 +54,7 @@ function App() {
             }
           </Route>
 
-          <Route path="/compete">
+          <Route exact path="/compete">
           {
               user && user._id ? <Compete updateUser= { updateUser} /> : <Login updateUser={updateUser} />
             }
