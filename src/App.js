@@ -8,19 +8,22 @@ import Games from './components/CreateTourney/Games';
 import Bracket from './components/CreateBrackets/Bracket';
 import Compete from './components/Compete/Compete';
 import up from './layeredwaves.svg'
+import Regt from './components/Regt/Regt';
 
 function App() {
 
   const [ user, setLoginUser] = useState({})
+  
+  const updateUser = (user) => {
+    localStorage.setItem("MyUser", JSON.stringify(user))
+    setLoginUser(user)
+  }
+
 
   useEffect(() => {
     setLoginUser(JSON.parse(localStorage.getItem("MyUser")))
   }, [])
 
-  const updateUser = (user) => {
-    localStorage.setItem("MyUser", JSON.stringify(user))
-    setLoginUser(user)
-  }
   return (
     <div>
     <img className="nope" src={up} />
@@ -54,9 +57,14 @@ function App() {
             }
           </Route>
 
-          <Route exact path="/compete">
+          <Route path="/compete">
           {
-              user && user._id ? <Compete updateUser= { updateUser} /> : <Login updateUser={updateUser} />
+              user && user._id ? <Compete updateUser= { updateUser}   /> : <Login updateUser={updateUser} />
+            }
+          </Route>
+          <Route path="/Regt">
+          {
+              user && user._id ? <Regt updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
             }
           </Route>
 
