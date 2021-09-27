@@ -7,12 +7,12 @@ import val from './valo.jpg';
 import { useHistory } from "react-router-dom";
 
 
- const Tiles = (props)=>{
+ const Tiles = (props,{updateUser})=>{
        const history = useHistory()
        
 
        const updateT=()=>{
-              const deezp= props
+              
               history.push('/Regt',props)
               
           
@@ -33,33 +33,41 @@ import { useHistory } from "react-router-dom";
        
         
     return(
+           <div>
+                  <div>
+                  <Menu updateUser={updateUser}/>
+                  </div>
         <div className="cerd ">
+              
    
  <div className="bracket"  >
             <div className="tourimg">
            <img  src={val} />
            </div>
          <div className="text">
-                <p>
-                Createdby:{props.cb}
+               <p>
+                Tournament Name:{props.tn}
                 </p>
                 <p>
-                no. of team:{props.noft}
-               </p>
-               <p>
-                system:{props.sys}
-               </p>
-               <p>
-                title:{props.tn}
-                
+                Created by:{props.cb}
                 </p>
-                <button  onClick={updateT}  > reg</button>
+                <p>
+                No. of teams:{props.noft}
+               </p>
+               <p>
+                System:{props.sys}
+               </p>
+                <p>
+                  Slots Available:{props.noft - props.Ts.length}
+                </p>     
+                <button  onClick={updateT}  >Register</button>
          </div>
 
 
         
  </div>
 
+        </div>
         </div>
     )
 

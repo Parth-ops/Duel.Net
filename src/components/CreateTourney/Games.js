@@ -20,7 +20,12 @@ const Games = ({updateUser}) => {
                     <div className="col-md-4">
                         <Card link="http://localhost:3000/create-brack-valo" imgsrc={valo} title="Valorant" des="A tactical 5v5 shooter with precise gunplay" btn="Let's Create!" />
                     </div>
-                    
+                    <div className="col-md-4">
+                        <Card link="http://localhost:3000/create-brack-valo" imgsrc={valo} title="Manage Your Tournaments" des="Customize your tournament settings (ADMIN)" btn="Manage" />
+                    </div>
+                    <div className="col-md-4">
+                        <Card link="http://localhost:3000/create-brack-valo" imgsrc={valo} title="Tournament Status" des="View live status of on-going tournaments" btn="View Status" />
+                    </div>
                 </div>
             </div>
             </div>

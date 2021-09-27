@@ -67,6 +67,16 @@ function App() {
               user && user._id ? <Regt updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
             }
           </Route>
+          <Route path="/manage">
+          {
+              user && user._id ? <Regt updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
+            }
+          </Route>
+          <Route path="/tour-status">
+          {
+              user && user._id ? <Regt updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
+            }
+          </Route>
 
 
         </Switch>
