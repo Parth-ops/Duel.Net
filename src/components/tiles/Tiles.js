@@ -42,7 +42,7 @@ import { useHistory } from "react-router-dom";
    
  <div className="bracket"  >
             <div className="tourimg">
-           <img  src={val} />
+           <img className="timage" src={val} />
            </div>
          <div className="text">
                <p>

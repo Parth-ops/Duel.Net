@@ -23,8 +23,7 @@
     font-size: 1.001rem;
 }
 
-.tourimg {
-    height: auto;
-    width: 300px;
-    object-fit: contain;
+.timage {
+    height: 300px;
+    width: 340px;
 }
