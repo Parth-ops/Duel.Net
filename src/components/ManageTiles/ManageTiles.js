@@ -5,11 +5,33 @@ import Menu from "../Navbar/Menu.js";
 import "./ManageTiles.css"
 import val from './valo.jpg';
 import { useHistory } from "react-router-dom";
+import axios from "axios";
 
 
  const ManageTiles = (props,{updateUser})=>{
+        var dd={
+               id:props.id,
+               hh:props.tn
+        }
+
        const history = useHistory()
-       
+       const DelTour=()=>{
+
+              if (window.confirm('confirm to delete tournament '+ props.tn)){
+                     axios.post("http://localhost:9002/deltour",dd).then(res => {
+                            alert(res.data.message)
+                            
+                        })
+
+
+                   
+    
+                     }
+              else{
+                     
+             }
+              return('hi')
+       }
 
        const updateTour=()=>{
               
@@ -54,7 +76,7 @@ import { useHistory } from "react-router-dom";
                 <p>
                   Slots Available:{props.noft - props.Ts.length}
                 </p>     
-                <button  onClick={updateTour}> Manage </button>
+                <button  onClick={updateTour}> Manage </button> <button id='del'  onClick={DelTour}> Delete </button> 
          </div>
 
 
