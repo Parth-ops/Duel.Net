@@ -10,6 +10,7 @@ import Compete from './components/Compete/Compete';
 import up from './layeredwaves.svg'
 import Regt from './components/Regt/Regt';
 import ManageTour from './components/ManageTour/ManageTour';
+import Megt from './components/Megt/Megt';
 
 function App() {
 
@@ -78,6 +79,12 @@ function App() {
               user && user._id ? <ManageTour updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
             }
           </Route>
+          <Route path ="/manage-t">
+          {
+               user && user._id ? <Megt updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
+            }
+
+            </Route>
 
 
         </Switch>

@@ -4,14 +4,14 @@ import Menu from '../Navbar/Menu';
 
 
 var data1 = {"_id":{"$oid":"61435702779302e12967ccd4"},
-"created_by":"Parth","system":"KO","noft":"4",
+"created_by":"Parth","system":"KO","noft":"8",
 "tourName":"Berlin","desp":"70000","game":"Valorant",
 "teams":[{"TeamName":"Sentinels","pid1":"Shazam","pid2":"Tenz","pid3":"Sick","pid4":"Zombs","pid5":"Dapr"}],"__v":0}
 
 var data2 = {"_id":{"$oid":"61435702779302e12967ccd4"},
 "created_by":"Parth","system":"KO","noft":"8",
 "tourName":"Berlin","desp":"70000","game":"Valorant",
-"teams":[{"TeamName":"100T","pid1":"Shazam","pid2":"Tenz","pid3":"Sick","pid4":"Zombs","pid5":"Dapr"}, 
+"teams":[{"TeamName":"VV","pid1":"Shazam","pid2":"Tenz","pid3":"Sick","pid4":"Zombs","pid5":"Dapr"}, 
          {"TeamName":"SEN","pid1":"Shazam","pid2":"Tenz","pid3":"Sick","pid4":"Zombs","pid5":"Dapr"}, 
          {"TeamName":"ENVY","pid1":"Shazam","pid2":"Tenz","pid3":"Sick","pid4":"Zombs","pid5":"Dapr"},
          {"TeamName":"GMB","pid1":"Shazam","pid2":"Tenz","pid3":"Sick","pid4":"Zombs","pid5":"Dapr"}],
@@ -147,7 +147,7 @@ const rounds: RoundProps[] = setData()
         <Menu updateUser={updateUser}/>
       </div>
       <div>
-        <Bracket rounds={rounds} />;
+        <Bracket rounds={rounds} />
       </div>
       </div>
     )
