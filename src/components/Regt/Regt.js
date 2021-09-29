@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { useLocation} from 'react-router';
 import axios from 'axios';
 import Menu from '../Navbar/Menu';
-
+console.log("hi")
 const Regt=({updateUser}) =>{
+
+    
     const location = useLocation();
     const [ setT, setTT] = useState({
         TeamName: "",
@@ -43,7 +45,7 @@ const Regt=({updateUser}) =>{
 
 
      }
-    
+     
     return(
         <div>
             <div>

@@ -1,0 +1,29 @@
+.cerd {
+    min-width: 40vw;
+    background-color: rgb(223, 160, 207);
+    /* padding-left: 20%; */
+    border-radius: 15px;
+    border-color: blueviolet;
+    border-width: 10px;
+    border-style: solid;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bracket {
+    display: flex;
+    flex-direction: row;
+}
+
+.text {
+    margin: 20px;
+    padding-left: 190px;
+    font-size: 1.001rem;
+}
+
+.timage {
+    height: 300px;
+    width: 340px;
+}

@@ -86,6 +86,12 @@ function App() {
 
             </Route>
 
+            <Route path="/custom-t">
+            {
+               user && user._id ? <ManageTour updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
+            }
+            </Route>
+
 
         </Switch>
       </Router>

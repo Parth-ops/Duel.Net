@@ -22,7 +22,7 @@ const Login = ({ updateUser}) => {
             [name]: value
         })
     }
-
+    console.log("ji")
 
     const login = () => {
         axios.post("http://localhost:9002/login", user)

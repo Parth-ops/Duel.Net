@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import Menu from '../Navbar/Menu';
 import axios from 'axios';
-
-
-import Tiles from "../tiles/Tiles";
+import ManageTiles from '../ManageTiles/ManageTiles';
 
 
 
 
 
+var myuser = JSON.parse(localStorage.getItem("MyUser"))
+console.log(JSON.stringify({username: myuser.name}))
+    
 
 
  
@@ -17,15 +18,15 @@ import Tiles from "../tiles/Tiles";
 
 
 const Megt = ({updateUser}) => {
-    var myuser = JSON.parse(localStorage.getItem("MyUser"))
-    const p=JSON.stringify({username: myuser.name})
-  
     
 
     const [gg, setgg] = useState([])
+    function GetReq()
+    {
+    axios.post("http://localhost:9002/manage-t", myuser).then(res => setgg(res.data))
+    }
 
-    axios.get("http://localhost:9002/manage-t",{params:p}).then(res => setgg(res.data))
-    
+    GetReq()
 
 
     
@@ -42,9 +43,7 @@ const Megt = ({updateUser}) => {
                 <div>
                 
                 {
-                   
-                
-                    gg.map((data, i) => <Tiles cb={data.created_by} noft={data.noft}  key={i}  sys={data.system} tn={data.tourName} Ts={data.teams} id={data._id} />)
+                    gg.map((data, i) => <ManageTiles cb={data.created_by} noft={data.noft}  key={i}  sys={data.system} tn={data.tourName} Ts={data.teams} id={data._id} />)
                 }
 
                 </div>
