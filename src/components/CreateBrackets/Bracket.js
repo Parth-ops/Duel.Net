@@ -70,8 +70,8 @@ const Bracket =  (props,{updateUser}) => {
                    
                 
                    <select id="ex1" name="system" value={tour.system} onChange={handleChange} className="brack">
-                        <option value="Leag">League</option>
-                        <option value="KO">Knock-out</option>
+                        <option value="League">League</option>
+                        <option value="Knock-Out">Knock-out</option>
 
                     </select>
                     </div>

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useLocation} from 'react-router';
 import axios from 'axios';
+import Menu from '../Navbar/Menu';
 
-const Regt=({updateUser},props) =>{
+const Regt=({updateUser}) =>{
     const location = useLocation();
     const [ setT, setTT] = useState({
         TeamName: "",
@@ -44,6 +45,11 @@ const Regt=({updateUser},props) =>{
      }
     
     return(
+        <div>
+            <div>
+                <Menu updateUser={updateUser}/>
+            </div>
+        
         <form>
         <br/>
         <div className="Team">
@@ -74,6 +80,7 @@ const Regt=({updateUser},props) =>{
         </div>
         <button onClick={Hansub}>Confirm </button>
     </form>
+    </div>
 
     )
 

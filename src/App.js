@@ -9,6 +9,7 @@ import Bracket from './components/CreateBrackets/Bracket';
 import Compete from './components/Compete/Compete';
 import up from './layeredwaves.svg'
 import Regt from './components/Regt/Regt';
+import ManageTour from './components/ManageTour/ManageTour';
 
 function App() {
 
@@ -69,12 +70,12 @@ function App() {
           </Route>
           <Route path="/manage">
           {
-              user && user._id ? <Regt updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
+              user && user._id ? <ManageTour updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
             }
           </Route>
           <Route path="/tour-status">
           {
-              user && user._id ? <Regt updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
+              user && user._id ? <ManageTour updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
             }
           </Route>
 
