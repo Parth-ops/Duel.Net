@@ -11,6 +11,7 @@ import up from './layeredwaves.svg'
 import Regt from './components/Regt/Regt';
 import ManageTour from './components/ManageTour/ManageTour';
 import Megt from './components/Megt/Megt';
+import Profile from './components/Profile/Profile';
 
 function App() {
 
@@ -89,6 +90,12 @@ function App() {
             <Route path="/custom-t">
             {
                user && user._id ? <ManageTour updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
+            }
+            </Route>
+
+            <Route path="/profile">
+            {
+               user && user._id ? <Profile updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
             }
             </Route>
 

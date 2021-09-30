@@ -26,7 +26,7 @@ const Menu = ({updateUser}) =>{
     </Nav>
     <Nav>
       <Nav.Link className="button" onClick={() => updateUser({})}>Logout</Nav.Link>
-      <Nav.Link eventKey={2} href="#memes">
+      <Nav.Link eventKey={2} href="http://localhost:3000/profile">
         Welcome {myuser.name}
       </Nav.Link>
     </Nav>
@@ -39,5 +39,3 @@ const Menu = ({updateUser}) =>{
 }
 
 export default Menu;
-
-
