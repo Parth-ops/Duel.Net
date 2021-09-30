@@ -59,7 +59,6 @@ const Bracket =  (props,{updateUser}) => {
         return (
             <div className="main">
             <div className="brack">
-                <Menu updateUser={updateUser}/>
             </div>
 
             <div>

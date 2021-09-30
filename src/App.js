@@ -11,6 +11,7 @@ import up from './layeredwaves.svg'
 import Regt from './components/Regt/Regt';
 import ManageTour from './components/ManageTour/ManageTour';
 import Megt from './components/Megt/Megt';
+import Menu from './components/Navbar/Menu';
 
 function App() {
 
@@ -33,6 +34,9 @@ function App() {
     <div className="spacer">
      
     <div className="App">
+    <div>
+                  <Menu updateUser={updateUser}/>
+                  </div>
       <Router>
         <Switch>
           <Route exact path="/">

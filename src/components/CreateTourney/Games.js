@@ -12,7 +12,6 @@ const Games = ({updateUser}) => {
             <div>
 
             <div>
-                <Menu updateUser={updateUser}/>
             </div>
 
                 <div className="container-fluid d-flex justify-content-center">

@@ -35,7 +35,6 @@ import { useHistory } from "react-router-dom";
     return(
            <div>
                   <div>
-                  <Menu updateUser={updateUser}/>
                   </div>
         <div className="cerd ">
               

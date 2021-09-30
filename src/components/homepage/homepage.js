@@ -10,7 +10,6 @@ const Homepage = ({updateUser}) => {
     return (
         <div className="homepage">
             <div>
-                <Menu updateUser={updateUser}/>
             </div>
             <div>
                 <Card />
