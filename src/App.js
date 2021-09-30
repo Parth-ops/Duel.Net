@@ -11,11 +11,8 @@ import up from './layeredwaves.svg'
 import Regt from './components/Regt/Regt';
 import ManageTour from './components/ManageTour/ManageTour';
 import Megt from './components/Megt/Megt';
-<<<<<<< HEAD
 import Profile from './components/Profile/Profile';
-=======
 import Menu from './components/Navbar/Menu';
->>>>>>> c5c97e4655d474a7d3dbb0cd60a8c6904d825606
 
 function App() {
 
@@ -38,22 +35,30 @@ function App() {
     <div className="spacer">
      
     <div className="App">
-    <div>
-                  <Menu updateUser={updateUser}/>
-                  </div>
-      <Router>
-        <Switch>
+    <Router>
+      <Switch>
+            <Route path="/login">
+              <Login updateUser={updateUser}/>
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
+   
+<div>
+
+            {
+              user && user._id ? <Menu  updateUser= { updateUser} /> : null
+            }
+                  
+    
+      
+        
           <Route exact path="/">
             {
               user && user._id ? <Homepage  updateUser= { updateUser} /> : <Login updateUser={updateUser} />
             }
             </Route>
-          <Route path="/login">
-            <Login updateUser={updateUser}/>
-            </Route>
-          <Route path="/register">
-            <Register />
-          </Route>
+        
 
           <Route path="/create">
           {
@@ -105,11 +110,11 @@ function App() {
                user && user._id ? <Profile updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
             }
             </Route>
-
+            </div>
 
         </Switch>
       </Router>
-
+        
     </div>
     </div>
     <img src={up} />

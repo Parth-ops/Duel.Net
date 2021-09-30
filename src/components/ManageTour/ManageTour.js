@@ -111,7 +111,7 @@ var data1 = {"_id":{"$oid":"61435702779302e12967ccd4"},
 
 
 
- const ManageTour =({updateUser}, data) => {
+ const ManageTour =({updateUser}) => {
   const location = useLocation();
   var data2 = location.state
   console.log(data2)
