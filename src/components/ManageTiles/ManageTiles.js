@@ -51,7 +51,7 @@ import axios from "axios";
     return(
            <div>
                   <div>
-                  <Menu updateUser={updateUser}/>
+              
                   </div>
         <div className="cerd ">
               
