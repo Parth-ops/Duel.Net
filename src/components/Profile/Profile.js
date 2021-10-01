@@ -4,7 +4,7 @@ import EditDetails from './EditDetails'
 
 
 
-const Profile= ()=>{ var myuser = JSON.parse(localStorage.getItem("MyUser"))
+const Profile= ({updateUser})=>{ var myuser = JSON.parse(localStorage.getItem("MyUser"))
 
 
    {
@@ -31,7 +31,7 @@ const Profile= ()=>{ var myuser = JSON.parse(localStorage.getItem("MyUser"))
                 }
              
              <div>
-             {isOpened && (<EditDetails/>)}
+             {isOpened && (<EditDetails updateUser= { updateUser}/>)}
              </div>
             </div>
         )

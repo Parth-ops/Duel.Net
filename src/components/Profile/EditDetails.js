@@ -3,11 +3,11 @@ import "./EditDetails.css"
 import axios from 'axios'
 
 
-const EditDetails =() => {var myuser = JSON.parse(localStorage.getItem("MyUser"))
+const EditDetails =({updateUser}) => {var myuser = JSON.parse(localStorage.getItem("MyUser"))
      {
 
 
-    // console.log(myuser)    
+    console.log(myuser)    
 
 const [ user, setUser] = useState({
     name: "",
@@ -28,33 +28,19 @@ const handleChange = e =>{
 }
 
 
-// const editdetails = () => {
-//     const {name,  cpassword, NewEnterPassword} = user
-//     if(name  && cpassword && (NewEnterPassword === NewEnterPassword))
-//     {
-//         axios.post("http://localhost:9002/profile", user)
-//         .then(res => {
-//             alert(res.data.message)
-//         })
-
-
-
-//     }
-
-//     else{
-//         alert("inavlid entry")
-//     }
-    
-// }
 const changeUsername = (e) =>{
     e.preventDefault()
 console.log(user)
     if (user.name) 
 {
 
-    axios.post("http://localhost:9002/profile", user)
+    axios.post("http://localhost:9002/profile", {old:myuser, new:user})
     .then(res => {
         alert(res.data.message)
+        if(res.data.message)
+        {
+            updateUser({})
+        }
     })
 
 }
@@ -68,7 +54,30 @@ else{
 const changePassword =(e) =>{
 e.preventDefault()
 
+if (user.NewEnterPassword && user.cpassword) 
+{
+
+    axios.post("http://localhost:9002/profile", {old:myuser, new:user})
+    .then(res => {
+        alert(res.data.message)
+        if(res.data.message === "Password changed, logging out...")
+        {
+            updateUser({})
+        }
+
+    })
+
 }
+else{
+
+    alert("Password empty")
+}
+}
+
+
+
+
+
         return (
             <div className="spidey">
             <form>
@@ -97,7 +106,7 @@ e.preventDefault()
                         <input type="password" name="NewEnterPassword"  placeholder="Re-enter password" onChange={handleChange}></input>
                     </div>    
                             <div className="pass">
-                                < button onClick={changePassword}className="butt">Change password  </button>
+                                < button onClick={changePassword}className="butt" >Change password  </button>
                             </div>
                     
                 </div>
