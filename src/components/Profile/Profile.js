@@ -23,7 +23,7 @@ const Profile= ({updateUser})=>{ var myuser = JSON.parse(localStorage.getItem("M
                (
                 <div>
                <h1> Hi {myuser.name} </h1>
-               <button onClick={toggle} > Want to edit acc details?</button>
+               <a className="texthover" onClick={toggle} > Want to edit acc details?</a>
                </div>
                
                )

@@ -85,24 +85,27 @@ else{
              <div className="display">
                     <div className="abs">
                     <input class ="segg" type="text" name="name" placeholder={"Your current username is " + myuser.name} onChange={handleChange} ></input>
-                    <div className="button">
+                    </div>
+                    <div className="bholder">
                         <button className="butt" onClick={changeUsername}>Change Username
                             </button>
                     </div>
-             </div>
+       
                 </div>
                 <br/>
-                <div className="display">
+              
                 <p>Change your password</p>
+                <div className="display">
                     <div className="abs">
                         <input type="password" name="cpassword"  placeholder="Current password" onChange={handleChange}></input>
-                    </div>
+                        
+                 
                         <br/>
-                    <div className="abs">    
+               
                         <input type="password" name="NewEnterPassword"  placeholder="New password" onChange={handleChange}></input>
-                    </div>    
+                    
                         <br/>
-                    <div className="abs">    
+               
                         <input type="password" name="NewEnterPassword"  placeholder="Re-enter password" onChange={handleChange}></input>
                     </div>    
                             <div className="pass">

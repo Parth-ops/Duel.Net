@@ -3,11 +3,13 @@
 }
 
 input {
-    font-size: small;
+    font-size: large;
 }
 
 .abs {
     padding-top: 2%;
+    display: flex;
+    flex-direction: column;
 }
 
 .segg {
@@ -18,4 +20,23 @@ input {
     background-color: rgb(196, 50, 201);
 }
 
-.display {}
+.display {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.texthover {
+    color: rgb(245, 75, 245);
+    padding-left: 15%;
+}
+
+.bholder {
+    padding-left: 220px;
+    padding-top: 18px;
+}
+
+.pass {
+    padding-left: 92px;
+    padding-top: 18px;
+}

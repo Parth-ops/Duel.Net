@@ -13,6 +13,7 @@ import ManageTour from './components/ManageTour/ManageTour';
 import Megt from './components/Megt/Megt';
 import Profile from './components/Profile/Profile';
 import Menu from './components/Navbar/Menu';
+import ParticleAnimation from 'react-particle-animation'
 
 function App() {
 
@@ -30,11 +31,15 @@ function App() {
 
   return (
     <div>
+    
     <img className="nope" src={up} />
     <div className="bottom">
     <div className="spacer">
      
     <div className="App">
+
+
+
     <Router>
       <Switch>
             <Route path="/login">
@@ -114,6 +119,8 @@ function App() {
 
         </Switch>
       </Router>
+
+
         
     </div>
     </div>

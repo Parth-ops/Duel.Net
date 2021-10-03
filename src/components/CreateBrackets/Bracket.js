@@ -57,7 +57,7 @@ const Bracket =  (props,{updateUser}) => {
         tour.game = props.game
         console.log(props.game)
         return (
-            <div className="main">
+            <div className="main1">
             <div className="brack">
             </div>
 
@@ -77,9 +77,11 @@ const Bracket =  (props,{updateUser}) => {
                     <br/>
                     <div className="brack">
                         <label for="ex2">No. of Teams</label> 
+                      
                         <input className="inputbox" name="noft" id="ex2" type="number" min="2" max="32" value={tour.noft}  onChange={handleChange}>
-                        
+                    
                         </input>
+                  
                     </div>
                     <br/>
                     <div className="brack">
@@ -89,7 +91,7 @@ const Bracket =  (props,{updateUser}) => {
                     <br/>
                     <div className="brack">
                         <label for="ex4">Description of the Tournament</label>
-                        <textarea  className="inputbox"rows="5" name="desp" cols="50" id="ex4"  onChange={handleChange} placeholder="Prize Money, Eligibility, etc."></textarea>
+                        <textarea  className="inputbox"rows="5" name="desp" cols="30" id="ex4"  onChange={handleChange} placeholder="Prize Money, Eligibility, etc."></textarea>
                     </div>
                 </form>
                <div className="buttonfix"> 
