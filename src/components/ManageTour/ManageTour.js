@@ -111,13 +111,17 @@ var data1 = {"_id":{"$oid":"61435702779302e12967ccd4"},
 
 
 
- const ManageTour =({updateUser}) => {
+  const ManageTour =({updateUser}) => {
   const location = useLocation();
-  var data2 = location.state
+  var data2 = location.state.prop
+  let teamarr = location.state.teamarr
+  
   console.log(data2)
   
   function setData(){
     let data = []
+    let dbdata=[]
+    let rno = 1
     let seed=[]
     var lim =parseInt(data2.noft)
     var j=(lim/2)
@@ -129,15 +133,33 @@ var data1 = {"_id":{"$oid":"61435702779302e12967ccd4"},
           console.log(j)
           for(var k=0; k<j;k++)
           {
-          seed.push({id:1, teams:[{name:"SEN"}, {name:"100T"}]})
+            if(j===lim/2){
+              seed.push({id:1, teams:[{name:teamarr[k][0]}, {name:teamarr[k][1]}]})
+              
+            }
+            if(j===lim/4)
+            {
+              seed.push({id:2, teams:[{name:""}, {name:""}]})
+            
           }
-          data.push({title: "Round "+String(i+1), seeds:seed})
+          if(j===lim/8)
+          {
+            seed.push({id:3, teams:[{name:""}, {name:""}]})
+          }
+
+          if(j===lim/16)
+          {
+            seed.push({id:4, teams:[{name:""}, {name:""}]})
+          }
+        }
+          data.push({title: "Round "+String(rno) , seeds:seed})
+          rno++
           seed = []
       }
       
       
     }
-    console.log(data)
+    console.log(i)
 
     return data;
  }

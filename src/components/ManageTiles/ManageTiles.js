@@ -9,7 +9,8 @@ import axios from "axios";
 
 
  const ManageTiles = (props,{updateUser})=>{
-        var dd={
+        
+       var dd={
                id:props.id,
                hh:props.tn
         }
@@ -34,8 +35,14 @@ import axios from "axios";
        }
 
        const updateTour=()=>{
+              let teams;
+              axios.post("http://localhost:9002/custom-t",props).then(res => {
+                     alert(res.data)
+                     teams = res.data
+                     history.push('/custom-t',{prop: props, teamarr: teams})
+                     
+                 })
               
-              history.push('/custom-t',props)
               
     
           

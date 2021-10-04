@@ -13,7 +13,7 @@ import ManageTour from './components/ManageTour/ManageTour';
 import Megt from './components/Megt/Megt';
 import Profile from './components/Profile/Profile';
 import Menu from './components/Navbar/Menu';
-import ParticleAnimation from 'react-particle-animation'
+
 
 function App() {
 
