@@ -8,6 +8,7 @@
     font-family: 'Reem Kufi', sans-serif;
     font-size: 2em;
     color: blueviolet;
+    z-index: 1;
 }
 
 .login>input {

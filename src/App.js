@@ -13,7 +13,7 @@ import ManageTour from './components/ManageTour/ManageTour';
 import Megt from './components/Megt/Megt';
 import Profile from './components/Profile/Profile';
 import Menu from './components/Navbar/Menu';
-
+import bgvid from './bgvid.mp4'
 
 function App() {
 
@@ -37,7 +37,14 @@ function App() {
     <div className="spacer">
      
     <div className="App">
-
+    <div className="mcontainer">
+    <div className="wet">
+<video autoPlay loop  muted style={{ position: "absolute",
+width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-20%)", height:"100%"
+}}  >
+  <source src={bgvid} type="video/mp4" />
+</video>
+</div>
 
 
     <Router>
@@ -49,7 +56,7 @@ function App() {
               <Register />
             </Route>
    
-<div>
+            <div className="mainsc">
 
             {
               user && user._id ? <Menu  updateUser= { updateUser} /> : null
@@ -119,7 +126,7 @@ function App() {
 
         </Switch>
       </Router>
-
+</div>
 
         
     </div>

@@ -4,6 +4,7 @@
 
 input {
     font-size: large;
+    border-radius: 10px;
 }
 
 .abs {
@@ -28,7 +29,6 @@ input {
 
 .texthover {
     color: rgb(245, 75, 245);
-    padding-left: 15%;
 }
 
 .bholder {
@@ -39,4 +39,16 @@ input {
 .pass {
     padding-left: 92px;
     padding-top: 18px;
+}
+
+.containerpro {
+    border-radius: 25px;
+    background-color: rgb(20, 20, 20);
+    border-color: blueviolet;
+    border-width: 13px;
+    border-style: solid;
+    width: 761px;
+    padding-left: 51px;
+    padding-top: 69px;
+    z-index: 1;
 }

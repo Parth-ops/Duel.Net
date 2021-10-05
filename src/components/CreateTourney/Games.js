@@ -2,7 +2,7 @@ import React from 'react'
 import Card from "../card/cardUI";
 import valo from "./assets/Valo.jpg"
 import Menu from '../Navbar/Menu';
-
+import bgvid3 from '../vids/bgvid3.mp4'
 
 const Games = ({updateUser}) => {
     var game = ""
@@ -13,7 +13,13 @@ const Games = ({updateUser}) => {
 
             <div>
             </div>
-
+            <div className="wet">
+<video autoPlay loop  muted style={{ position: "absolute",
+width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-20%)", height:"100%"
+}}  >
+  <source src={bgvid3} type="video/mp4" />
+</video>
+</div>
                 <div className="container-fluid d-flex justify-content-center">
                 <div className="row">
                     <div className="col-md-4">

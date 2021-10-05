@@ -7,9 +7,13 @@
     border-width: 10px;
     border-style: solid;
     margin-bottom: 10px;
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
+    display: grid;
+}
+
+p {
+    font-size: 1.3rem;
 }
 
 .bracket {
@@ -18,12 +22,15 @@
 }
 
 .text {
-    margin: 20px;
-    padding-left: 190px;
-    font-size: 1.001rem;
+    padding-left: 70px;
+    padding-right: 100px;
+    padding-top: 30px;
 }
 
 .timage {
-    height: 300px;
-    width: 340px;
+    object-fit: contain;
+}
+
+.but1 {
+    background-color: #43916d;
 }

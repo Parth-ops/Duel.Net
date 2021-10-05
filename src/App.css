@@ -1,14 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 .App {
     display: flex;
     width: 100vw;
     height: 100vh;
-    font-size: 1.em;
+    font-size: 1.5em;
     justify-content: center;
     align-items: center;
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Reem Kufi', sans-serif;
     color: blueviolet;
-    overflow-y: scroll;
 }
 
 .spacer {
@@ -18,6 +16,25 @@
     background-size: cover;
     background: #100e11;
     width: 100%;
+    z-index: 9;
+}
+
+.mcontainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.mainsc {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    z-index: 1;
+}
+
+.wet {
+    grid-column-start: 1;
+    grid-row-start: 1;
 }
 
 .nope {
@@ -26,4 +43,9 @@
 
 img {
     width: 100%;
+}
+
+.video {
+    width: 100vw;
+    height: 100vh;
 }

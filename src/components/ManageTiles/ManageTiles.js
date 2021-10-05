@@ -83,7 +83,7 @@ import axios from "axios";
                 <p>
                   Slots Available:{props.noft - props.Ts.length}
                 </p>     
-                <button  onClick={updateTour}> Manage </button> <button id='del'  onClick={DelTour}> Delete </button> 
+                <button className="but1" onClick={updateTour}> Manage </button> <button id='del'  onClick={DelTour}> Delete </button> 
          </div>
 
 
