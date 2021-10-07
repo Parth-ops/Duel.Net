@@ -1,7 +1,6 @@
 import React from 'react'
 import { Navbar,  NavDropdown,  Nav, Container } from 'react-bootstrap';
-
-
+import { GiCrownCoin } from "react-icons/gi";
 
 
 
@@ -15,7 +14,7 @@ const Menu = ({updateUser}) =>{
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
       <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
+      <Nav.Link href="http://localhost:3000/pricing">Pricing</Nav.Link>
       <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -25,6 +24,7 @@ const Menu = ({updateUser}) =>{
       </NavDropdown>
     </Nav>
     <Nav>
+    <Nav.Link className="coins" id="coin">0 <GiCrownCoin/></Nav.Link>
       <Nav.Link className="button" onClick={() => updateUser({})}>Logout</Nav.Link>
       <Nav.Link eventKey={2} href="http://localhost:3000/profile">
         Welcome {myuser.name}

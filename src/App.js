@@ -13,6 +13,7 @@ import ManageTour from './components/ManageTour/ManageTour';
 import Megt from './components/Megt/Megt';
 import Profile from './components/Profile/Profile';
 import Menu from './components/Navbar/Menu';
+import Pricing from './components/pricing/Pricing';
 import bgvid from './bgvid.mp4'
 
 function App() {
@@ -120,6 +121,13 @@ width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-20%)", he
             <Route path="/profile">
             {
                user && user._id ? <Profile updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
+            }
+            </Route>
+
+            
+            <Route path="/pricing">
+            {
+               user && user._id ? <Pricing updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
             }
             </Route>
             </div>

@@ -12,6 +12,7 @@
     "react-bootstrap": "^1.6.3",
     "react-brackets": "^0.4.6",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
     "react-particle-animation": "^2.0.2",
     "react-particles-js": "^3.5.3",
     "react-router": "^5.2.1",
@@ -19,6 +20,7 @@
     "react-scripts": "4.0.3",
     "react-swipeable-views": "^0.14.0",
     "regenerator-runtime": "^0.13.9",
+    "sass": "^1.42.1",
     "seeding": "^1.0.1",
     "styled-components": "^5.3.1",
     "web-vitals": "^1.1.2"
