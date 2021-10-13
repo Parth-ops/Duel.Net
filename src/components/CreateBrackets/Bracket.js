@@ -13,6 +13,7 @@ const Bracket =  (props,{updateUser}) => {
 
     const [ tour, setTour] = useState({
         created_by: "",
+        user_id: myuser._id,
         system: "Leag",
         noft: "",
         tourName: "",
@@ -30,9 +31,9 @@ const Bracket =  (props,{updateUser}) => {
     }
 
     const submitData = () => {
-        const {created_by, system, noft, tourName, desp, game} = tour
+        const {created_by, user_id, system, noft, tourName, desp, game} = tour
 
-        if(created_by && system && noft && tourName && desp && noft<=32 && game)
+        if(created_by && user_id && system && noft && tourName && desp && noft<=32 && game)
         {
             axios.post("http://localhost:9002/create-brack-valo", tour)
             .then(res => {
@@ -56,6 +57,8 @@ const Bracket =  (props,{updateUser}) => {
     }
 
         tour.created_by = myuser.name
+        tour.user_id = myuser._id
+        console.log(myuser._id)
         tour.game = props.game
         console.log(props.game)
         return (

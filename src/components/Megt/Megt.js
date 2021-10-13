@@ -7,8 +7,7 @@ import ManageTiles from '../ManageTiles/ManageTiles';
 
 
 
-var myuser = JSON.parse(localStorage.getItem("MyUser"))
-console.log(JSON.stringify({username: myuser.name}))
+
     
 
 
@@ -19,13 +18,15 @@ console.log(JSON.stringify({username: myuser.name}))
 
 const Megt = ({updateUser}) => {
     
+    var myuser = JSON.parse(localStorage.getItem("MyUser"))
+    // console.log(JSON.stringify({username: myuser.name})) 
 
     const [gg, setgg] = useState([])
     function GetReq()
     {
     axios.post("http://localhost:9002/manage-t", myuser).then(res => setgg(res.data))
     }
-
+    
     GetReq()
 
 
@@ -43,7 +44,7 @@ const Megt = ({updateUser}) => {
                 <div>
                 
                 {
-                    gg.map((data, i) => <ManageTiles cb={data.created_by} noft={data.noft}  key={i}  sys={data.system} tn={data.tourName} Ts={data.teams} id={data._id} />)
+                    gg.map((data, i) => <ManageTiles cb={data.created_by}  noft={data.noft}  key={i}  sys={data.system} tn={data.tourName} Ts={data.teams} id={data._id} />)
                 }
 
                 </div>

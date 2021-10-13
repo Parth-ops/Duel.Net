@@ -1,7 +1,5 @@
 import React, { useState,useEffect, } from "react";
-import Card from "../card/cards";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Menu from "../Navbar/Menu.js";
 import "./ManageTiles.css"
 import val from './valo.jpg';
 import { useHistory } from "react-router-dom";
@@ -9,7 +7,7 @@ import axios from "axios";
 
 
  const ManageTiles = (props,{updateUser})=>{
-        
+       
        var dd={
                id:props.id,
                hh:props.tn
@@ -38,6 +36,7 @@ import axios from "axios";
               let teams;
               axios.post("http://localhost:9002/custom-t",props).then(res => {
                      alert(res.data)
+                     
                      teams = res.data
                      history.push('/custom-t',{prop: props, teamarr: teams})
                      
