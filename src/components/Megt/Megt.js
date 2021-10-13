@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Menu from '../Navbar/Menu';
 import axios from 'axios';
 import ManageTiles from '../ManageTiles/ManageTiles';
@@ -19,7 +19,7 @@ import ManageTiles from '../ManageTiles/ManageTiles';
 const Megt = ({updateUser}) => {
     
     var myuser = JSON.parse(localStorage.getItem("MyUser"))
-    // console.log(JSON.stringify({username: myuser.name})) 
+    console.log(JSON.stringify({username: myuser.name})) 
 
     const [gg, setgg] = useState([])
     function GetReq()
@@ -27,7 +27,10 @@ const Megt = ({updateUser}) => {
     axios.post("http://localhost:9002/manage-t", myuser).then(res => setgg(res.data))
     }
     
+   useEffect(() =>{
     GetReq()
+
+   }, []) 
 
 
     

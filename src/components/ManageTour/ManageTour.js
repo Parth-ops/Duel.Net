@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./ManageTour.css";
 import { useLocation} from 'react-router';
 import axios from 'axios';
 
 
-
+let loadData;
 
 function loadR1(data_id)
 {
   axios.post("http://localhost:9002/brack-data", data_id).then(res => {
-    // console.log(res.data)
-  return res.data;
+  console.log(res.data)
+  loadData = res.data;
     
     
 })
@@ -19,14 +19,18 @@ function loadR1(data_id)
 
 
 
-  const ManageTour =({updateUser}) => {
+const ManageTour =({updateUser}) => {
   const location = useLocation();
   var data2 = location.state.prop
-  
+  loadR1({id:data2.id, onload:true})
 
-let loadData = loadR1({id:data2.id, onload:true})
-setTimeout(2000)
+  useEffect(()=>{
+     
+    
+  }, [loadData])
+
 console.log(loadData)
+
 
   
 
@@ -72,7 +76,7 @@ console.log(loadData)
 
     }
     console.log(daarra)
-    axios.post("http://localhost:9002/brack-data", {id: data2.id, data:daarra, onload:false}).then(res => {
+    axios.post("http://localhost:9002/brack-data-update", {id: data2.id, data:daarra, onload:false}).then(res => {
       alert(res.data.message)
       
   })
