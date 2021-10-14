@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import "./ManageTour.css";
 import { useLocation} from 'react-router';
 import axios from 'axios';
+import { Alert } from 'react-bootstrap';
 
 
 let loadData;
@@ -112,7 +113,7 @@ const ManageTour =({updateUser}) => {
       
       }
       catch(err){
-        console.log(err)
+        alert('brackets are not Created')
       }
   }
 
