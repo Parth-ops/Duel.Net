@@ -5,7 +5,14 @@ import axios from 'axios';
 import { Alert } from 'react-bootstrap';
 
 
-let loadData;
+
+
+
+
+
+const ManageTour =({updateUser}) => {
+
+  let loadData;
 
 function loadR1(data_id)
 {
@@ -17,11 +24,6 @@ function loadR1(data_id)
 })
 
 }
-
-
-
-
-const ManageTour =({updateUser}) => {
   const location = useLocation();
   var data2 = location.state.prop
   loadR1({id:data2.id, onload:true})
