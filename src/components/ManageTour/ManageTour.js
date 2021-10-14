@@ -9,11 +9,12 @@ let loadData;
 function loadR1(data_id)
 {
   axios.post("http://localhost:9002/brack-data", data_id).then(res => {
-  console.log(res.data)
+  // console.log(res.data)
   loadData = res.data;
     
     
 })
+
 }
 
 
@@ -23,13 +24,13 @@ const ManageTour =({updateUser}) => {
   const location = useLocation();
   var data2 = location.state.prop
   loadR1({id:data2.id, onload:true})
+  
 
   useEffect(()=>{
+    
      
     
-  }, [loadData])
-
-console.log(loadData)
+  },[loadData] )
 
 
   
@@ -82,17 +83,56 @@ console.log(loadData)
   })
 
   }
+  
+  function monke(){
+    try{
+     
+      for( var i=1;i<=15;i++){
+        let T1=String(i)+'.1'
+        // console.log(T1)
+    
+        
+        
+         let T2=String(i)+'.2'
+        //  console.log(T2)
+        
+    
+       
+  
+        let s1=T1+'s'
+        let s2=T2+'s'
+        console.log(T1,s1,T2,s2)
+       
+         console.log(loadData[i-1].t1n,loadData[i-1].t2n,loadData[i-1].t1ss,loadData[i-1].t2ss) 
+        document.getElementById(T1).value = loadData[i-1].t1n;
+        document.getElementById(T2).value = loadData[i-1].t2n;
+        document.getElementById(s1).value = loadData[i-1].t1ss;
+        document.getElementById(s2).value =loadData[i-1].t2ss;
+        }
+      
+      }
+      catch(err){
+        console.log(err)
+      }
+  }
 
 
 
 
 
     return (
+      
+    
       <div class="Bracket">
+        
        <div class="grp1">
          <h4>R1</h4>
           <div class="ss">
-          <input type="text" placeholder="TBD" class="seed"  id="1.1" /> <input type="text" class="seedscr" id="1.1s"/>
+          <input type="text" placeholder="TBD" class="seed"  id="1.1"
+          
+          
+          
+          /> <input type="text" class="seedscr" id="1.1s"/>
           <br/>
           <input type="text" placeholder="TBD" class="seed" id="1.2"  /> <input type="text" class="seedscr" id="1.2s"/>
         
@@ -231,14 +271,23 @@ console.log(loadData)
       
     
 
-      <footer><button class="bgg" onClick={setbra}>Save</button></footer>
+      <footer><button class="bgg" onClick={setbra}>Save</button><button class="bg" onClick={monke}>loadTeams</button>
+      <br/>
+      
+      </footer>
+     
+      
+     
       </div>
+      
 
 
     )
-        
+  
         
     }
+  
+      
 
 
 export default ManageTour
