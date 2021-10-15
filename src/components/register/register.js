@@ -1,11 +1,16 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "./register.css"
 import axios from "axios"
 import { useHistory } from "react-router-dom";
+import eyecon from "./eyecon.png"
 
 const Register = () => {
 
     const history = useHistory()
+
+    useEffect(()=>{
+        console.log( document.getElementById("pass").type)
+    }, [document.getElementById("pass")])
 
     const [ user, setUser] = useState({
         name: "",
@@ -21,32 +26,59 @@ const Register = () => {
             [name]: value
         })
     }
+    function validateEmail(email) 
+    {
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+
+    function validatePass(pass) 
+    {
+        var re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/;
+        return re.test(pass);
+    }
+
+    
 
     const register = () => {
         const {name, email, password, reEnterPassword} = user
         if(name && email && password && (password === reEnterPassword))
         {
-            axios.post("http://localhost:9002/register", user)
-            .then(res => {
-                alert(res.data.message)
-                history.push("/login")
-            })
-
-
+            if(validateEmail(email))
+            {
+                if(validatePass(password))
+                {
+            
+                axios.post("http://localhost:9002/register", user)
+                .then(res => {
+                    alert(res.data.message)
+                    history.push("/login")
+                })
+             }
+             else{
+                 alert("Enter a valid Password!")
+             }
+            }
+            else{
+                alert("Enter a valid E-mail ID")
+            }
         }
         else{
             alert("inavlid entry")
         }
         
     }
-
+  
+   
+   
+      console.log()
     return (
     <div className="register">
         {console.log("User", user)}
         <h1>Register</h1>
         <input type="text" name="name" value={user.name} placeholder="Your User-Name" onChange={handleChange} ></input>
         <input type="text" name="email" value={user.email} placeholder="Your E-mail" onChange={handleChange}></input>
-        <input type="password" name="password" value={user.password} placeholder="Your password" onChange={handleChange}></input>
+        <input id="pass" type="password" name="password" value={user.password} placeholder="Your password"  onChange={handleChange} ></input>
         <input type="password" name="reEnterPassword" value={user.reEnterPassword} placeholder="Re-enter password" onChange={handleChange}></input>
         <div className="button" onClick={register}>Register</div>
         <div>or</div>
