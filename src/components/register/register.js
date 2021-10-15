@@ -7,10 +7,14 @@ import eyecon from "./eyecon.png"
 const Register = () => {
 
     const history = useHistory()
+    
+    const [showpass, setshow] = useState(false)
+    const togglePass = () => setshow(!showpass);
+    const showPassword = {
+        passStat: showpass ? 'text' : 'password',
+      };
+   
 
-    useEffect(()=>{
-        console.log( document.getElementById("pass").type)
-    }, [document.getElementById("pass")])
 
     const [ user, setUser] = useState({
         name: "",
@@ -78,7 +82,8 @@ const Register = () => {
         <h1>Register</h1>
         <input type="text" name="name" value={user.name} placeholder="Your User-Name" onChange={handleChange} ></input>
         <input type="text" name="email" value={user.email} placeholder="Your E-mail" onChange={handleChange}></input>
-        <input id="pass" type="password" name="password" value={user.password} placeholder="Your password"  onChange={handleChange} ></input>
+        <input id="pass" type={showPassword.passStat} name="password" value={user.password} placeholder="Your password"  onChange={handleChange} ></input>
+        <img src="hello" onMouseOver={togglePass}  onMouseOut={togglePass}/>
         <input type="password" name="reEnterPassword" value={user.reEnterPassword} placeholder="Re-enter password" onChange={handleChange}></input>
         <div className="button" onClick={register}>Register</div>
         <div>or</div>
