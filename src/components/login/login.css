@@ -41,6 +41,30 @@
     margin: auto;
 }
 
+.hot {
+    display: flex;
+    align-items: flex-end;
+    padding-left: 10px;
+    margin-bottom: 25px;
+}
+
+.inputb {
+    border-radius: 8px;
+    border: 2px solid #000000;
+    outline: none;
+    color: #000000;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0.75rem;
+    width: 92%;
+    font-size: 1rem;
+    background: #e8daf0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.icon {
+    padding-left: 10px;
+}
+
 h1 {
     font-size: 4rem;
 }

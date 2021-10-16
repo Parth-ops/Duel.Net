@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import "./login.css"
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import { MdVisibility } from "react-icons/md";
 
 const Login = ({ updateUser}) => {
 
@@ -42,8 +43,12 @@ const Login = ({ updateUser}) => {
         <div className="login">
             <h1>Login</h1>
             <input type="text" name="email" value={user.email} onChange={handleChange} placeholder="Enter your E-mail"></input>
-            <input type="password" type={showPassword.passStat} name="password" value={user.password} onChange={handleChange} placeholder="Enter your password"></input>
-            <img src="hello" onMouseOver={togglePass}  onMouseOut={togglePass}/>
+            <div className="hot">
+            <input className="inputb" type="password" type={showPassword.passStat} name="password" value={user.password} onChange={handleChange} placeholder="Enter your password"></input> 
+        <div className="iconcont">
+                < MdVisibility className="icon" onMouseOver={togglePass}  onMouseOut={togglePass}/>
+        </div>
+            </div>
             <div className="button" onClick={login}>Login</div>
             <div>or</div>
             <div className="button" onClick={() => history.push("/register")}>Register</div>
