@@ -119,6 +119,30 @@ function loadR1(data_id)
       }
   }
 
+  let round = parseInt(data2.noft)
+console.log(data2.noft)
+  let r1 = {visibility: "visible"}
+  let qf = {visibility: "visible"}
+  let sf = {visibility: "visible"}
+  if(round<16 && round>=8)
+  {
+    console.log("if block")
+    r1.visibility = "hidden"
+    
+  }
+  else if(round<8 && round>=4 )
+  {
+    r1.visibility = "hidden"
+    qf.visibility = "hidden"
+  }
+  else if(round<4 && round>=2)
+  {
+    r1.visibility = "hidden"
+    qf.visibility = "hidden"
+    sf.visibility = "hidden"
+  }
+
+console.log(r1)
 
 
 
@@ -126,9 +150,9 @@ function loadR1(data_id)
     return (
       
     
-      <div class="Bracket">
+      <div class="Bracket" >
         
-       <div class="grp1">
+       <div class="grp1" style={r1}>
          <h4>R1</h4>
           <div class="ss">
           <input type="text" placeholder="TBD" class="seed"  id="1.1"
@@ -166,8 +190,8 @@ function loadR1(data_id)
       
       
       </div>
-      <div class="grp2">
-        <h4>R2</h4>
+      <div class="grp2" style={qf}>
+        <h4>Quarter Finals</h4>
           <div class="ss">
           <input type="text" placeholder="TBD" class="seed"  id="5.1"/> <input type="text" class="seedscr" id="5.1s"/>
           <br/>
@@ -185,7 +209,7 @@ function loadR1(data_id)
           </div>
           <div class="grpf">
             
-          <div class="ss">
+          <div class="ss" style={sf}>
           <h4>SEMI-final 1</h4>
           <input type="text" placeholder="TBD" class="seed" id="7.1" /> <input type="text" class="seedscr" id="7.1s"/>
           <br/>
@@ -201,7 +225,7 @@ function loadR1(data_id)
         
           </div>
           
-          <div class="ss">
+          <div class="ss" style={sf}>
           <h4>SEMI-final 2</h4> 
           <input type="text" placeholder="TBD" class="seed" id="9.1" /> <input type="text" class="seedscr" id="9.1s"/>
           <br/>
@@ -212,8 +236,8 @@ function loadR1(data_id)
 
         
           </div>
-          <div class="grp3">
-          <h4>R2</h4> 
+          <div class="grp3" style={qf}>
+          <h4>Quarter Finals</h4> 
           <div class="ss">
           <input type="text" placeholder="TBD" class="seed"  id="10.1"/> <input type="text" class="seedscr" id="10.1s"/>
           <br/>
@@ -229,7 +253,7 @@ function loadR1(data_id)
 
         
           </div>
-          <div class="grp4">
+          <div class="grp4" style={r1}>
           <h4>R1</h4> 
           <div class="ss">
           <input type="text" placeholder="TBD" class="seed"  id="12.1"/> <input type="text" class="seedscr" id="12.1s"/>
