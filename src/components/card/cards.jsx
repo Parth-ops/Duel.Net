@@ -16,7 +16,7 @@ class Cards extends Component{
                         <Card imgsrc={img2} link="http://localhost:3000/compete" title="Compete" des="Search for available tournaments and participate in them." btn="Let's Play!"/>
                     </div>
                     <div className="col-md-4">
-                        <Card imgsrc={img3} link="#" title="Leaderboards" des="Look at the who's topping the leaderboards." btn="Let's See!"/>
+                        <Card imgsrc={img3} link="http://localhost:3000/leaderboard" title="Leaderboards" des="Look at the who's topping the leaderboards." btn="Let's See!"/>
                     </div>
                 </div>
             </div>

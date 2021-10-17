@@ -46,3 +46,10 @@
     background: #e8daf0;
     font-family: 'Roboto', sans-serif;
 }
+
+.redhot {
+    padding-left: 24px;
+}
+.redhot > input {
+    width: 69%;
+}

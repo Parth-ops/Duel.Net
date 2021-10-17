@@ -83,8 +83,10 @@ const Register = () => {
         <h1>Register</h1>
         <input type="text" name="name" value={user.name} placeholder="Your User-Name" onChange={handleChange} ></input>
         <input type="text" name="email" value={user.email} placeholder="Your E-mail" onChange={handleChange}></input>
-        <input id="pass" className="inputr" type={showPassword.passStat} name="password" value={user.password} placeholder="Your password"  onChange={handleChange} ></input>
-        < MdVisibility onMouseOver={togglePass}  onMouseOut={togglePass}/>
+        <div className="redhot">
+            <input id="pass" className="inputr" type={showPassword.passStat} name="password" value={user.password} placeholder="Your password"  onChange={handleChange} ></input>
+            < MdVisibility onMouseOver={togglePass}  onMouseOut={togglePass}/>
+        </div>
         <input type="password" name="reEnterPassword" value={user.reEnterPassword} placeholder="Re-enter password" onChange={handleChange}></input>
         <div className="button" onClick={register}>Register</div>
         <div>or</div>
