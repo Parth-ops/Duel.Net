@@ -29,7 +29,7 @@ width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-20%)", he
                         <Card link="http://localhost:3000/manage-t" imgsrc={valo} title="Manage Your Tournaments" des="Customize your tournament settings (ADMIN)" btn="Manage" />
                     </div>
                     <div className="col-md-4">
-                        <Card link="" imgsrc={valo} title="Tournament Status" des="View live status of on-going tournaments" btn="View Status" />
+                        <Card link="http://localhost:3000/manage-g" imgsrc={valo} title="Tournament Status" des="View live status of on-going tournaments" btn="View Status" />
                     </div>
                 </div>
             </div>

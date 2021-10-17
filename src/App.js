@@ -15,7 +15,9 @@ import Profile from './components/Profile/Profile';
 import Menu from './components/Navbar/Menu';
 import Pricing from './components/pricing/Pricing';
 import bgvid from './bgvid.mp4'
-import Leaderboard from './components/Leaderboards/Leaderboard';
+import ViewTour from './components/ViewTour/ViewTour';
+import VueT from './components/VueT/VueT';
+
 
 function App() {
 
@@ -112,10 +114,21 @@ width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-20%)", he
             }
 
             </Route>
+            <Route path ="/manage-g">
+          {
+               user && user._id ? <VueT updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
+            }
+
+            </Route>
 
             <Route path="/custom-t">
             {
                user && user._id ? <ManageTour updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
+            }
+            </Route>
+            <Route path="/custom-tites">
+            {
+               user && user._id ? <ViewTour updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
             }
             </Route>
 
