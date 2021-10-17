@@ -17,7 +17,8 @@ import Pricing from './components/pricing/Pricing';
 import bgvid from './bgvid.mp4'
 import ViewTour from './components/ViewTour/ViewTour';
 import VueT from './components/VueT/VueT';
-
+import Leaderboard from './components/Leaderboards/Leaderboard'
+import ViewTeams from './components/ViewTeams/ViewTeams';
 
 function App() {
 
@@ -147,6 +148,12 @@ width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-20%)", he
             <Route path="/leaderboard">
             {
                user && user._id ? <Leaderboard updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
+            }
+            </Route>
+
+            <Route path="/teams">
+            {
+               user && user._id ? <ViewTeams updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
             }
             </Route>
             </div>

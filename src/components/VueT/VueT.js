@@ -3,6 +3,7 @@ import Menu from '../Navbar/Menu';
 import axios from 'axios';
 import ManageTiles from '../ManageTiles/ManageTiles';
 import ViewTiles from '../ViewTiles/ViewTiles';
+import { GiCoinsPile } from 'react-icons/gi';
 
 
 
@@ -23,9 +24,11 @@ const VueT = ({updateUser}) => {
     console.log(JSON.stringify({username: myuser.name})) 
 
     const [gg, setgg] = useState([])
+    
     function GetReq()
     {
-    axios.post("http://localhost:9002/manage-t", myuser).then(res => setgg(res.data))
+    axios.get("http://localhost:9002/compete").then(res => setgg(res.data))
+
     }
     
    useEffect(() =>{

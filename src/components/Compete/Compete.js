@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Menu from '../Navbar/Menu';
 import axios from 'axios';
-
+import "./Compete.css"
 
 import Tiles from "../tiles/Tiles";
 
@@ -19,9 +19,16 @@ const Compete = ({updateUser}) => {
 
     const [gg, setgg] = useState([])
 
+    function GetReq()
+    {
     axios.get("http://localhost:9002/compete").then(res => setgg(res.data))
-    
 
+    }
+    
+    useEffect(() =>{
+        GetReq()
+    
+       }, [])
 
     
     

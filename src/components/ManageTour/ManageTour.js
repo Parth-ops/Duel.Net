@@ -29,12 +29,7 @@ function loadR1(data_id)
   loadR1({id:data2.id, onload:true})
   
 
-  useEffect(()=>{
-    
-     
-    
-  },[loadData] )
-
+ 
 
   
 
@@ -86,10 +81,21 @@ function loadR1(data_id)
   })
 
   }
-  
-  function monke(){
-    try{
+
+  useEffect(()=>{
+    
      
+    
+  },[loadData] )
+
+  function monke(){
+  
+    try{
+      if(!loadData || !loadData[0].t1n)
+      {
+        alert('Brackets are not generated!')
+      }
+      else{
       for( var i=1;i<=15;i++){
         let T1=String(i)+'.1'
         // console.log(T1)
@@ -112,15 +118,16 @@ function loadR1(data_id)
         document.getElementById(s1).value = loadData[i-1].t1ss;
         document.getElementById(s2).value =loadData[i-1].t2ss;
         }
+      }
       
       }
       catch(err){
-        alert('brackets are not Created')
+        alert('Brackets are not created!')
       }
   }
 
   let round = parseInt(data2.noft)
-console.log(data2.noft)
+  console.log(data2.noft)
   let r1 = {visibility: "visible"}
   let qf = {visibility: "visible"}
   let sf = {visibility: "visible"}
@@ -142,6 +149,7 @@ console.log(data2.noft)
     sf.visibility = "hidden"
   }
 
+ 
 console.log(r1)
 
 

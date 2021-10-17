@@ -46,7 +46,10 @@ import axios from "axios";
     
           
             } 
-
+       const sendData=()=>{
+              history.push('/teams', {prop: props})
+       }
+            
  
 
        // useEffect(() => {
@@ -82,7 +85,7 @@ import axios from "axios";
                 <p>
                   Slots Available:{props.noft - props.Ts.length}
                 </p>     
-                <button className="but1" onClick={updateTour}> Manage </button> 
+                <button className="but1" onClick={updateTour}> Manage </button> <button className="but2"  onClick={sendData}> Teams </button>
          </div>
 
 
