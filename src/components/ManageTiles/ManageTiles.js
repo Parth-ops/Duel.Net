@@ -8,6 +8,9 @@ import axios from "axios";
 
  const ManageTiles = (props,{updateUser})=>{
        
+       const sendData=()=>{
+              history.push('/teams', {prop: props})
+       }
        var dd={
                id:props.id,
                hh:props.tn
@@ -83,6 +86,7 @@ import axios from "axios";
                   Slots Available:{props.noft - props.Ts.length}
                 </p>     
                 <button className="but1" onClick={updateTour}> Manage </button> <button id='del'  onClick={DelTour}> Delete </button> 
+                <button className="but2"  onClick={sendData}> Teams </button>
          </div>
 
 
