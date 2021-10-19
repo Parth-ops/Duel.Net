@@ -1,13 +1,12 @@
 .App {
     display: flex;
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
     font-size: 1.5em;
     justify-content: center;
     align-items: center;
     font-family: 'Reem Kufi', sans-serif;
     color: blueviolet;
-    
 }
 
 .spacer {
@@ -44,6 +43,10 @@
 
 img {
     width: 100%;
+}
+
+.bottomsvg {
+    z-index: -1;
 }
 
 .video {

@@ -37,7 +37,7 @@ const Compete = ({updateUser}) => {
     
 
         return (
-            <div>
+            <div className="hesllo">
                 <div>
                     <Menu updateUser={updateUser}/>
                 </div>

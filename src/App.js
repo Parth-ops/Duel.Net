@@ -45,7 +45,7 @@ function App() {
     <div className="mcontainer">
     <div className="wet">
 <video autoPlay loop  muted style={{ position: "absolute",
-width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-20%)", height:"100%"
+width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-7%)", height:"50%"
 }}  >
   <source src={bgvid} type="video/mp4" />
 </video>
