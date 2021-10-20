@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useLocation} from 'react-router';
 import axios from 'axios';
 import Menu from '../Navbar/Menu';
+import regtbg from './regtbg.png'
+import "./regt.css"
 console.log("hi")
 const Regt=({updateUser}) =>{
 
@@ -49,41 +51,51 @@ const Regt=({updateUser}) =>{
      }
      
     return(
-        <div>
+
+         
+        <div className="mcont">
+        <div className="cont1">
+                
+                <img className="rbg" src={regtbg} />
+            
+        </div>
+        <div className="cont3">
             <div>
                 <Menu updateUser={updateUser}/>
             </div>
         
         <form>
         <br/>
+        
         <div className="Team">
-            <label for="tn">Please enter your Team name</label>
-            <input className="inputbox" type="text" id="TeamName" name="TeamName" placeholder="Entern Team name" onChange={handleChange}></input>
+            <label for="tn">Please enter your Team name</label> {'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}
+            <input className="inputbox" type="text" id="TeamName" name="TeamName" placeholder="Enter Your Team Name" onChange={handleChange}></input>
         </div>
         <br/>
         <div className="Team">
             <label for="pid1">Player 1</label>
-            <input className="inputbox" type="text" id="pid1" name="pid1" placeholder=" Username-#abcd" onChange={handleChange}></input>
+            {'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'} <input className="inputbox" type="text" id="pid1" name="pid1" placeholder=" Username  #abcd" onChange={handleChange}></input>
         </div>
         <div className="Team">
             <label for="pid2">Player 2</label>
-            <input className="inputbox" type="text" id="pid2" name="pid2" placeholder=" Username-#abcd" onChange={handleChange}></input>
+            {'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'} <input className="inputbox" type="text" id="pid2" name="pid2" placeholder=" Username  #abcd" onChange={handleChange}></input>
         </div>
         <div className="Team">
             <label for="pid3">Player 3</label>
-            <input className="inputbox" type="text" id="pid3" name="pid3" placeholder=" Username-#abcd" onChange={handleChange}></input>
+            {'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'} <input className="inputbox" type="text" id="pid3" name="pid3" placeholder=" Username  #abcd" onChange={handleChange}></input>
         </div>
         <div className="Team">
             <label for="pid4">Player 4</label>
-            <input className="inputbox" type="text" id="pid4" name="pid4" placeholder=" Username-#abcd" onChange={handleChange}></input>
+            {'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'} <input className="inputbox" type="text" id="pid4" name="pid4" placeholder=" Username  #abcd" onChange={handleChange}></input>
         </div>
 
         <div className="Team">
             <label for="pid5">Player 5</label>
-            <input className="inputbox" type="text" id="pid5" name="pid5" placeholder=" Username-#abcd" onChange={handleChange}></input>
+            {'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'} <input className="inputbox" type="text" id="pid5" name="pid5" placeholder=" Username  #abcd" onChange={handleChange}></input>
         </div>
-        <button onClick={Hansub}>Confirm </button>
+        {'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}<button onClick={Hansub}> Register </button>
     </form>
+    </div>
     </div>
 
     )

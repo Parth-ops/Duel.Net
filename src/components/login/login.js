@@ -3,6 +3,7 @@ import "./login.css"
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { MdVisibility } from "react-icons/md";
+import bgvid from '../vids/bgvid.mp4'
 
 const Login = ({ updateUser}) => {
 
@@ -40,20 +41,31 @@ const Login = ({ updateUser}) => {
 
 
     return (
-        <div className="login">
-            <h1>Login</h1>
-            <input type="text" name="email" value={user.email} onChange={handleChange} placeholder="Enter your E-mail"></input>
-            <div className="hot">
-            <input className="inputb" type="password" type={showPassword.passStat} name="password" value={user.password} onChange={handleChange} placeholder="Enter your password"></input> 
-        <div className="iconcont">
-                < MdVisibility className="icon" onMouseOver={togglePass}  onMouseOut={togglePass}/>
-        </div>
+      
+        <div className="mcontainer">
+          
+        <div className="wet">
+    <video autoPlay loop  muted style={{ position: "absolute",
+    width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-16%)", height:"55%"
+    }}  >
+      <source src={bgvid} type="video/mp4" />
+    </video>
+    </div>
+    <div className="login">
+                <h1>Login</h1>
+                <input type="text" name="email" value={user.email} onChange={handleChange} placeholder="Enter your E-mail"></input>
+                <div className="hot">
+                <input className="inputb" type="password" type={showPassword.passStat} name="password" value={user.password} onChange={handleChange} placeholder="Enter your password"></input> 
+            <div className="iconcont">
+                    < MdVisibility className="icon" onMouseOver={togglePass}  onMouseOut={togglePass}/>
             </div>
-            <div className="button" onClick={login}>Login</div>
-            <div>or</div>
-            <div className="button" onClick={() => history.push("/register")}>Register</div>
-
-        </div>
+                </div>
+                <div className="button" onClick={login}>Login</div>
+                <div>or</div>
+                <div className="button" onClick={() => history.push("/register")}>Register</div>
+    
+    </div>
+            </div>
     )
 }
 export default Login

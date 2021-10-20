@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import "./EditDetails.css" 
 import axios from 'axios'
+
 import bgvid2 from '../vids/bgvid2.mp4'
 
 

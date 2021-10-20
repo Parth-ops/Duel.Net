@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Menu from '../Navbar/Menu';
 import axios from "axios"
 import './Bracket.css'
+import bbg from './bracketbg.png'
 import bgvid3 from '../vids/bgvid3.mp4'
 
 
@@ -62,7 +63,16 @@ const Bracket =  (props,{updateUser}) => {
         tour.game = props.game
         console.log(props.game)
         return (
-            
+            <div className="mcont">
+            <div className="cont1">
+                    
+                    <img className="bbg" src={bbg} />
+                
+            </div>
+          
+
+
+
            <div className="well">
                 <div className="main1">
                 <div className="brack">
@@ -74,8 +84,7 @@ const Bracket =  (props,{updateUser}) => {
                         <label for="ex1" >Type of Tournament:</label>
                        
                         {'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}
-                       <select id="ex1" name="system" value={tour.system} onChange={handleChange} className="brack">
-                            <option value="League">League</option>
+                       <select className="inputboxb" id="ex1" name="system" value={tour.system} onChange={handleChange} className="brack">
                             <option value="Knock-Out">Knock-out</option>
                
                         </select>
@@ -85,21 +94,24 @@ const Bracket =  (props,{updateUser}) => {
                             <label for="ex2">No. of Teams</label> 
                             {'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}
                           
-                            <input className="inputbox" name="noft" id="ex2" type="number" min="2" max="32" value={tour.noft}  onChange={handleChange}>
-                        
-                            </input>
+                            <select className="inputboxb" name="noft" id="ex2" type="number" value={tour.noft}  onChange={handleChange}>
+                            <option value="2">2 Teams</option>
+                            <option value="4">4 Teams</option>
+                            <option value="8">8 Teams</option>
+                            <option value="16">16 Teams</option>
+                            </select>
                       
                         </div>
                         <br/>
                         <div className="brack">
                             <label for="ex3">Name of the Tournament</label>
                             {'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}
-                            <input className="inputbox" type="text" id="ex3" name="tourName" placeholder="Enter name" onChange={handleChange}></input>
+                            <input className="inputboxb" type="text" id="ex3" name="tourName" placeholder="   Enter name" onChange={handleChange}></input>
                         </div>
                         <br/>
                         <div className="brack">
                             <label for="ex4">Description of the Tournament</label>
-                            <textarea  className="inputbox"rows="5" name="desp" cols="30" id="ex4"  onChange={handleChange} placeholder="Prize Money, Eligibility, etc."></textarea>
+                            <textarea  className="inputboxb"rows="5" name="desp" cols="30" id="ex4"  onChange={handleChange} placeholder="    Prize Money, Eligibility, etc."></textarea>
                         </div>
                     </form>
                    <div className="buttonfix"> 
@@ -107,6 +119,7 @@ const Bracket =  (props,{updateUser}) => {
                    </div>
                 </div>
                 </div>
+      </div>
       </div>
         )
     }

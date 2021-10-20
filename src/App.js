@@ -42,14 +42,7 @@ function App() {
     <div className="spacer">
      
     <div className="App">
-    <div className="mcontainer">
-    <div className="wet">
-<video autoPlay loop  muted style={{ position: "absolute",
-width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-7%)", height:"50%"
-}}  >
-  <source src={bgvid} type="video/mp4" />
-</video>
-</div>
+
 
 
     <Router>
@@ -160,7 +153,6 @@ width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-7%)", hei
 
         </Switch>
       </Router>
-</div>
 
         
     </div>

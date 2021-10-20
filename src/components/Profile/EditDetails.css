@@ -2,9 +2,33 @@
     display: inline;
 }
 
+.mcont {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.cont1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+}
+
+.editbg {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    z-index: 1;
+    margin-left: 29%;
+    margin-top: 18%;
+    width: 51%;
+}
+
+.rexa {
+    margin-left: 28%;
+}
+
 input {
     font-size: large;
-    border-radius: 10px;
 }
 
 .abs {

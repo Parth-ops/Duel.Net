@@ -26,7 +26,7 @@ width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-20%)", he
                         <Card link="http://localhost:3000/create-brack-valo" imgsrc={valo} title="Valorant" des="A tactical 5v5 shooter with precise gunplay" btn="Let's Create!" />
                     </div>
                     <div className="col-md-4">
-                        <Card link="http://localhost:3000/manage-t" imgsrc={valo} title="Manage Your Tournaments" des="Customize your tournament settings (ADMIN)" btn="Manage" />
+                        <Card link="http://localhost:3000/manage-t" imgsrc={valo} title="Manage Tournaments" des="Customize your tournament" btn="Manage" />
                     </div>
                     <div className="col-md-4">
                         <Card link="http://localhost:3000/manage-g" imgsrc={valo} title="Tournament Status" des="View live status of on-going tournaments" btn="View Status" />
