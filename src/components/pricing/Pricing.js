@@ -3,8 +3,15 @@ import axios from 'axios'
 import './Pricing.scss'
 import bgvid4 from '../vids/bgvid4.mp4'
 import { GiCrownCoin } from "react-icons/gi";
+import { useHistory } from "react-router-dom";
 
 const Pricing =() =>{
+const history = useHistory()
+
+function routeGpay()
+{
+    history.push('/gpay')
+}
 return(
 
 <div>
@@ -24,7 +31,7 @@ width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-20%)", he
             <li>One time investment</li>
             <li>Basic Analysis</li>
             <li>Allows to host 5 tournaments </li>
-            <li class="buy"><button>Register</button></li>   
+            <li class="buy"><a href="http://localhost:3000/gpay">Register</a></li>   
         </ul>
     </div>
     <div class="promo second">
@@ -35,7 +42,7 @@ width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-20%)", he
             <li>Detailed analysis</li>
             <li>Allows to host 10 tournaments </li>
             <li>Cheap and Efficient</li> 
-            <li class="buy"><button>Register</button></li>  
+            <li class="buy"><a href="http://localhost:3000/gpay">Register</a></li>  
         </ul>
     </div>
     <div class="promo third scale">
@@ -46,11 +53,13 @@ width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-20%)", he
             <li>Visual analytics per player</li>
             <li>Unlimited Tournaments</li>
             <li>And more...</li>  
-            <li class="buy"><button>Register</button></li> 
+            <li class="buy"><a href="http://localhost:3000/gpay">Register</a></li> 
         </ul>
     </div>  
 </div>
+{/* <button href="http://localhost:3000/gpay">Click Me</button> */}
 </div>
+
 
 )
 

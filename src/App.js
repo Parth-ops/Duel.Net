@@ -19,6 +19,7 @@ import ViewTour from './components/ViewTour/ViewTour';
 import VueT from './components/VueT/VueT';
 import Leaderboard from './components/Leaderboards/Leaderboard'
 import ViewTeams from './components/ViewTeams/ViewTeams';
+import Gpay from './components/pricing/Gpay'
 
 function App() {
 
@@ -149,7 +150,13 @@ function App() {
                user && user._id ? <ViewTeams updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
             }
             </Route>
+            <Route path="/gpay">
+            {
+               user && user._id ? <Gpay updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
+            }
+            </Route>
             </div>
+
 
         </Switch>
       </Router>

@@ -85,7 +85,7 @@ import axios from "axios";
                 <p>
                   Slots Available:{props.noft - props.Ts.length}
                 </p>     
-                <button className="but1" onClick={updateTour}> Manage </button> <button className="but2"  onClick={sendData}> Teams </button>
+                <button className="but1" onClick={updateTour}> Brackets </button> <button className="but2"  onClick={sendData}> Teams </button>
          </div>
 
 
