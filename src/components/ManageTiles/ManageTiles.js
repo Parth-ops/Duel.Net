@@ -21,7 +21,8 @@ import axios from "axios";
 
               if (window.confirm('confirm to delete tournament '+ props.tn)){
                      axios.post("http://localhost:9002/deltour",dd).then(res => {
-                            alert(res.data.message)
+                            
+                            window.location.reload();
                             
                         })
 

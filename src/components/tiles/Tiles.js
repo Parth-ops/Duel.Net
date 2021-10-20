@@ -58,8 +58,9 @@ import { useHistory } from "react-router-dom";
                </p>
                 <p>
                   Slots Available:{props.noft - props.Ts.length}
-                </p>     
-                <button  onClick={updateT}  >Register</button>
+                </p>  
+                {!(props.noft - props.Ts.length===0) && (<button  onClick={updateT}  >Register</button>)}   
+               
          </div>
 
 

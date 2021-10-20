@@ -7,6 +7,7 @@ const Regt=({updateUser}) =>{
 
     
     const location = useLocation();
+    console.log(location.state)
     const [ setT, setTT] = useState({
         TeamName: "",
         pid1: "",
@@ -14,7 +15,8 @@ const Regt=({updateUser}) =>{
         pid3: "",
         pid4: "",
         pid5: "",
-        cid :location.state.id
+        cid :location.state.id,
+        noft:location.state.noft
         
     })
      const handleChange= e =>{

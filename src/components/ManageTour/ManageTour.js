@@ -91,7 +91,7 @@ function loadR1(data_id)
   function monke(){
   
     try{
-      if(!loadData || !loadData[0].t1n)
+      if((!loadData || !loadData[0].t1n) && data2.noft>8)
       {
         alert('Brackets are not generated!')
       }
