@@ -3,6 +3,7 @@ import Card from "./cardUI";
 import img1 from "./assets/managers.jpg"
 import img2 from "./assets/pro.jpg"
 import img3 from "./assets/table.png"
+import { GiCrownCoin } from "react-icons/gi";
 
 class Cards extends Component{
     render(){

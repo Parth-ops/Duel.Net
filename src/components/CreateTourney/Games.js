@@ -1,11 +1,11 @@
 import React from 'react'
 import Card from "../card/cardUI";
 import valo from "./assets/Valo.jpg"
-import Menu from '../Navbar/Menu';
 import bgvid3 from '../vids/bgvid3.mp4'
+import { GiCrownCoin } from "react-icons/gi";
 
 const Games = ({updateUser}) => {
-    var game = ""
+  
    
         return (
             
@@ -23,13 +23,14 @@ width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-20%)", he
                 <div className="container-fluid d-flex justify-content-center">
                 <div className="row">
                     <div className="col-md-4">
-                        <Card link="http://localhost:3000/create-brack-valo" imgsrc={valo} title="Valorant" des="A tactical 5v5 shooter with precise gunplay" btn="Let's Create!" />
+                        <Card link="http://localhost:3000/create-brack-valo" imgsrc={valo} title="Valorant" des="A tactical 5v5 shooter with precise gunplay (200 D-coins)" btn="Let's Create!" />
+                       
                     </div>
                     <div className="col-md-4">
-                        <Card link="http://localhost:3000/manage-t" imgsrc={valo} title="Manage Tournaments" des="Customize your tournament" btn="Manage" />
+                        <Card link="http://localhost:3000/manage-t" imgsrc={valo} title="Manage Tournaments" des="Customize your tournament details (ADMIN)" btn="Manage" />
                     </div>
                     <div className="col-md-4">
-                        <Card link="http://localhost:3000/manage-g" imgsrc={valo} title="Tournament Status" des="View live status of on-going tournaments" btn="View Status" />
+                        <Card link="http://localhost:3000/manage-g" imgsrc={valo} title="Tournament Status" des="View status of on-going tournaments (Brackets and Teams )" btn="View Status" />
                     </div>
                 </div>
             </div>

@@ -29,9 +29,8 @@ width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-20%)", he
             <li class="brief">Basic membership</li>
             <li class="price"> 200 <GiCrownCoin/> <br/> Rs. 549 </li>
             <li>One time investment</li>
-            <li>Basic Analysis</li>
-            <li>Allows to host 5 tournaments </li>
-            <li class="buy"><button onClick={()=>{routeGpay(200, 549)}}>Register</button></li>   
+            <li>Allows to host 1 tournament </li>
+            <li class="buy"><button onClick={()=>{routeGpay(200, 549)}}>Buy</button></li>   
         </ul>
     </div>
     <div class="promo second">
@@ -39,21 +38,19 @@ width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-20%)", he
         <ul class="features">
             <li class="brief">Plus membership</li>
             <li class="price">500 <GiCrownCoin/><br/> Rs. 999</li>
-            <li>Detailed analysis</li>
-            <li>Allows to host 10 tournaments </li>
-            <li>Cheap and Efficient</li> 
-            <li class="buy"><button onClick={()=>{routeGpay(500, 999)}}>Register</button></li>  
+            <li>Cheap and Efficient</li>
+            <li>Allows to host 5 tournaments </li>
+            <li class="buy"><button onClick={()=>{routeGpay(500, 999)}}>Buy</button></li>  
         </ul>
     </div>
     <div class="promo third scale">
         <h4>Premium</h4>
         <ul class="features">
             <li class="brief">Best deal for recurring user</li>
-            <li class="price">950 <GiCrownCoin/><br/> Rs. 1499</li>
-            <li>Visual analytics per player</li>
-            <li>Unlimited Tournaments</li>
-            <li>And more...</li>  
-            <li class="buy"><button onClick={()=>{routeGpay(950, 1499)}}>Register</button></li> 
+            <li class="price">1000 <GiCrownCoin/><br/> Rs. 1499</li>
+            <li> Bang for one's buck!</li>
+            <li> Allows to host 10 tournaments</li>
+            <li class="buy"><button onClick={()=>{routeGpay(1000, 1499)}}>Buy</button></li> 
         </ul>
     </div>  
 </div>

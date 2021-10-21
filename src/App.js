@@ -20,6 +20,7 @@ import VueT from './components/VueT/VueT';
 import Leaderboard from './components/Leaderboards/Leaderboard'
 import ViewTeams from './components/ViewTeams/ViewTeams';
 import Gpay from './components/pricing/Gpay'
+import PaySuccess from './components/pricing/PaySuccess'
 
 function App() {
 
@@ -153,6 +154,11 @@ function App() {
             <Route path="/gpay">
             {
                user && user._id ? <Gpay updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
+            }
+            </Route>
+            <Route path="/success">
+            {
+               user && user._id ? <PaySuccess updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
             }
             </Route>
             </div>

@@ -1,14 +1,15 @@
 import GooglePayButton from '@google-pay/button-react';
 import React from 'react';
 import { useLocation } from "react-router";
-import axios from 'axios';
+import { useHistory } from 'react-router';
 
 const Gpay =({updateUser}) => {
   const location = useLocation();
+  const history = useHistory()
   let coins = location.state.prop.coins
   let price = location.state.prop.price
   let myuser = JSON.parse(localStorage.getItem("MyUser"))
-  
+  let ctr=0
 
   
 
@@ -49,31 +50,33 @@ console.log(myuser)
             currencyCode: 'INR',
             countryCode: 'IN',
           },
-          shippingAddressRequired: true,
-          callbackIntents: ['SHIPPING_ADDRESS', 'PAYMENT_AUTHORIZATION'],
+          // shippingAddressRequired: true,
+          callbackIntents: ['PAYMENT_AUTHORIZATION'],
         }}
         onLoadPaymentData={paymentRequest => {
           console.log('Success', paymentRequest);
           console.log('Successful payment for No. of coins: '+coins+" for Rs. "+price)
           myuser.dcoins = String(parseInt(myuser.dcoins)+coins)
-          console.log(myuser)
+          console.log("onLoadPaymentData updated at: ", ctr++)
           updateUser(myuser)
-          
+          history.push('/success')
           
         }}
         onPaymentAuthorized={paymentData => {
             console.log('Payment Authorised Success', paymentData)
-            return { transactionState: 'SUCCESS'}
+            console.log("onPaymentAuthorized updated at: ", ctr++)
+            return { transactionState: 'SUCCESS', }
           }
         }
-        onPaymentDataChanged={paymentData => {
-            console.log('On Payment Data Changed', paymentData)
+        // onPaymentDataChanged={paymentData => {
+        //     console.log('On Payment Data Changed', paymentData)
+        //     console.log("onPaymentDataChanged updated at: ", ctr++)
            
-          }
-        }
+        //   }
+        // }
         existingPaymentMethodRequired='false'
         buttonColor='white'
-        buttonType='Buy'
+        buttonType='subscribe'
       />
     </div>
     
