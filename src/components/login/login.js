@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import { MdVisibility } from "react-icons/md";
 import bgvid from '../vids/bgvid.mp4'
 
+
 const Login = ({ updateUser}) => {
 
     const history = useHistory()
@@ -28,7 +29,6 @@ const Login = ({ updateUser}) => {
             [name]: value
         })
     }
-    console.log("ji")
 
     const login = () => {
         axios.post("http://localhost:9002/login", user)

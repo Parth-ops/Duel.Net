@@ -24,7 +24,7 @@ const Menu = ({updateUser}) =>{
       </NavDropdown>
     </Nav>
     <Nav>
-    <Nav.Link className="coins" id="coin">0 <GiCrownCoin/></Nav.Link>
+    <Nav.Link className="coins" id="coin">{myuser.dcoins} <GiCrownCoin/></Nav.Link>
       <Nav.Link className="button" onClick={() => updateUser({})}>Logout</Nav.Link>
       <Nav.Link eventKey={2} href="http://localhost:3000/profile">
         Welcome {myuser.name}

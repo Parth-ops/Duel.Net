@@ -1,7 +1,18 @@
 import GooglePayButton from '@google-pay/button-react';
 import React from 'react';
+import { useLocation } from "react-router";
+import axios from 'axios';
 
 const Gpay =({updateUser}) => {
+  const location = useLocation();
+  let coins = location.state.prop.coins
+  let price = location.state.prop.price
+  let myuser = JSON.parse(localStorage.getItem("MyUser"))
+  
+
+  
+
+console.log(myuser)
   return (
     <div >
       <h1> Google Pay React Demo</h1>
@@ -34,7 +45,7 @@ const Gpay =({updateUser}) => {
           transactionInfo: {
             totalPriceStatus: 'FINAL',
             totalPriceLabel: 'Total',
-            totalPrice: '1',
+            totalPrice: String(price),
             currencyCode: 'INR',
             countryCode: 'IN',
           },
@@ -43,6 +54,12 @@ const Gpay =({updateUser}) => {
         }}
         onLoadPaymentData={paymentRequest => {
           console.log('Success', paymentRequest);
+          console.log('Successful payment for No. of coins: '+coins+" for Rs. "+price)
+          myuser.dcoins = String(parseInt(myuser.dcoins)+coins)
+          console.log(myuser)
+          updateUser(myuser)
+          
+          
         }}
         onPaymentAuthorized={paymentData => {
             console.log('Payment Authorised Success', paymentData)
@@ -51,11 +68,11 @@ const Gpay =({updateUser}) => {
         }
         onPaymentDataChanged={paymentData => {
             console.log('On Payment Data Changed', paymentData)
-            return { }
+           
           }
         }
         existingPaymentMethodRequired='false'
-        buttonColor='black'
+        buttonColor='white'
         buttonType='Buy'
       />
     </div>

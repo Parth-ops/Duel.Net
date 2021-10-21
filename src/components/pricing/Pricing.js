@@ -8,9 +8,9 @@ import { useHistory } from "react-router-dom";
 const Pricing =() =>{
 const history = useHistory()
 
-function routeGpay()
+const routeGpay=(coins, price)=>
 {
-    history.push('/gpay')
+    history.push('/gpay', {prop:{coins: coins, price:price}})
 }
 return(
 
@@ -27,33 +27,33 @@ width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-20%)", he
         <h4>Basic</h4>
         <ul class="features">
             <li class="brief">Basic membership</li>
-            <li class="price"> 200 <GiCrownCoin/> </li>
+            <li class="price"> 200 <GiCrownCoin/> <br/> Rs. 549 </li>
             <li>One time investment</li>
             <li>Basic Analysis</li>
             <li>Allows to host 5 tournaments </li>
-            <li class="buy"><a href="http://localhost:3000/gpay">Register</a></li>   
+            <li class="buy"><button onClick={()=>{routeGpay(200, 549)}}>Register</button></li>   
         </ul>
     </div>
     <div class="promo second">
         <h4>Plus</h4>
         <ul class="features">
             <li class="brief">Plus membership</li>
-            <li class="price">500 <GiCrownCoin/></li>
+            <li class="price">500 <GiCrownCoin/><br/> Rs. 999</li>
             <li>Detailed analysis</li>
             <li>Allows to host 10 tournaments </li>
             <li>Cheap and Efficient</li> 
-            <li class="buy"><a href="http://localhost:3000/gpay">Register</a></li>  
+            <li class="buy"><button onClick={()=>{routeGpay(500, 999)}}>Register</button></li>  
         </ul>
     </div>
     <div class="promo third scale">
         <h4>Premium</h4>
         <ul class="features">
             <li class="brief">Best deal for recurring user</li>
-            <li class="price">950 <GiCrownCoin/></li>
+            <li class="price">950 <GiCrownCoin/><br/> Rs. 1499</li>
             <li>Visual analytics per player</li>
             <li>Unlimited Tournaments</li>
             <li>And more...</li>  
-            <li class="buy"><a href="http://localhost:3000/gpay">Register</a></li> 
+            <li class="buy"><button onClick={()=>{routeGpay(950, 1499)}}>Register</button></li> 
         </ul>
     </div>  
 </div>
