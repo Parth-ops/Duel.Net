@@ -80,7 +80,7 @@ function App() {
 
           <Route path="/create-brack-valo">
           {
-              user && user._id ? <Bracket game="Valorant"  updateUser= { updateUser} /> : <Login updateUser={updateUser} />
+              user && user._id ? <Bracket updateUser= {updateUser} game="Valorant"   /> : <Login updateUser={updateUser} />
             }
           </Route>
 

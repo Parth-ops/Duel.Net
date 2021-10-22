@@ -15,16 +15,15 @@ const Menu = ({updateUser}) =>{
     <Nav className="me-auto">
       <Nav.Link href="#features">Features</Nav.Link>
       <Nav.Link href="http://localhost:3000/pricing">Pricing</Nav.Link>
-      <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+      <NavDropdown title="Games" id="collasible-nav-dropdown">
+        <NavDropdown.Item href="#action/3.1">Valorant</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.2">League Of Legends</NavDropdown.Item>
         <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+
       </NavDropdown>
     </Nav>
     <Nav>
-    <Nav.Link className="coins" id="coin">{myuser.dcoins} <GiCrownCoin/></Nav.Link>
+    <Nav.Link className="coins" id="coin" href="http://localhost:3000/pricing">{myuser.dcoins} <GiCrownCoin/></Nav.Link>
       <Nav.Link className="button" onClick={() => updateUser({})}>Logout</Nav.Link>
       <Nav.Link eventKey={2} href="http://localhost:3000/profile">
         Welcome {myuser.name}

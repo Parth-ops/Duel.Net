@@ -16,7 +16,7 @@ const Gpay =({updateUser}) => {
 console.log(myuser)
   return (
     <div >
-      <h1> Google Pay React Demo</h1>
+      <h1> Pay using Google Pay</h1>
       <hr />
       <GooglePayButton
         environment="TEST"
@@ -76,7 +76,7 @@ console.log(myuser)
         // }
         existingPaymentMethodRequired='false'
         buttonColor='white'
-        buttonType='subscribe'
+        buttonType='short'
       />
     </div>
     

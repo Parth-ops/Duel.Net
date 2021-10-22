@@ -9,14 +9,14 @@ import bgvid3 from '../vids/bgvid3.mp4'
 
 const Bracket =  (props,{updateUser}) => {
     var myuser = JSON.parse(localStorage.getItem("MyUser"))
-    
 
+    
 
     const [ tour, setTour] = useState({
         created_by: "",
         user_id: myuser._id,
-        system: "Leag",
-        noft: "",
+        system: "Knock-Out",
+        noft: "2",
         tourName: "",
         desp: "",
         game: ""
@@ -29,31 +29,56 @@ const Bracket =  (props,{updateUser}) => {
             ...tour,
             [name]: value
         })
+
+        console.log(tour)
     }
 
+    function deductCoins(){
+            axios.post("http://localhost:9002/deduct", myuser).then(
+                res=>{
+                    if(res.data.message)
+                    {
+                        
+                        myuser.dcoins = String(parseInt(myuser.dcoins) -200)
+                        console.log(myuser)
+                        localStorage.setItem("MyUser", JSON.stringify(myuser))
+                    }
+                  
+                }
+            )
+           
+        
+    }
     const submitData = () => {
         const {created_by, user_id, system, noft, tourName, desp, game} = tour
+        console.log(noft)
+        let coins = parseInt(myuser.dcoins)
 
-        if(created_by && user_id && system && noft && tourName && desp && noft<=32 && game)
+        if(created_by && user_id && system && noft && tourName && desp && game)
         {
+            if(coins<200)
+        {
+            alert("Insufficient Funds!")
+        }
+        else{
+            try
+            {
+            deductCoins()
             axios.post("http://localhost:9002/create-brack-valo", tour)
             .then(res => {
                 alert(res.data.message)
-                
+                window.location.reload()
             })
-
-
         }
-        else{
-            if(noft>32)
-            {
-                alert("Max number of teams is 32")
-            }
-            else
-            {
-                alert("inavlid entry")
-            }
+        catch(error)
+        {
+            console.log(error)
         }
+         }
+
+        
+        }
+        
         
     }
 
@@ -78,7 +103,7 @@ const Bracket =  (props,{updateUser}) => {
                 <div className="brack">
                 </div>
                 <div>
-                {console.log("Created By", myuser)}
+                {/* {console.log("Created By", myuser)} */}
                     <form >
                         <div className="brack"> 
                         <label for="ex1" >Type of Tournament:</label>
