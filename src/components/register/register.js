@@ -22,6 +22,7 @@ const Register = () => {
         email: "",
         password: "",
         dcoins: "0",
+        paystatus:false,
         reEnterPassword: ""
     })
 
@@ -47,7 +48,7 @@ const Register = () => {
     
 
     const register = () => {
-        const {name, email, password, dcoins, reEnterPassword} = user
+        const {name, email, password, dcoins, paystatus, reEnterPassword} = user
         if(name && email && password && dcoins && (password === reEnterPassword))
         {
             if(validateEmail(email))

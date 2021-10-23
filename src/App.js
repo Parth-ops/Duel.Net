@@ -158,7 +158,7 @@ function App() {
             </Route>
             <Route path="/success">
             {
-               user && user._id ? <PaySuccess updateUser= { updateUser}  /> : <Login updateUser={updateUser} />
+               user && user._id ? user.paystatus ? < PaySuccess updateUser= { updateUser}   /> : <Homepage  updateUser= { updateUser} /> : <Login updateUser={updateUser} />
             }
             </Route>
             </div>

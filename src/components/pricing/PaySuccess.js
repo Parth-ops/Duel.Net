@@ -3,10 +3,12 @@ import { useLocation } from "react-router";
 import axios from 'axios';
 import bgvid5 from '../vids/bgvid5.mp4'
 import { useState, useEffect } from 'react';
+import { useHistory } from 'react-router';
 import "./pays.css"
 
-const PaySuccess = ()=>{
+const PaySuccess = ({updateUser})=>{
 
+    const history = useHistory()
     let myuser = JSON.parse(localStorage.getItem("MyUser"))
     const [isLoaded, setLoaded] = useState(false)
     const [isSuccess, setSuccess] = useState(false)
@@ -46,11 +48,13 @@ const PaySuccess = ()=>{
     </div>
 
     <div className="bthome">
-<a  href="http://localhost:3000/"className="record">Back to Home page</a>
+<button  className="record" onClick={()=>{ history.push("/"); myuser.paystatus = false; updateUser(myuser)}}>Back to Home page</button>
 </div>      
         </div>
     )
     }
+
+
     else if(isLoaded && !isSuccess)
     {
         return(
@@ -59,7 +63,9 @@ const PaySuccess = ()=>{
             </div>
         )
     }
-    else{
+
+    else
+    {
         return(
             <div>
                 Processing

@@ -58,6 +58,7 @@ console.log(myuser)
           console.log('Successful payment for No. of coins: '+coins+" for Rs. "+price)
           myuser.dcoins = String(parseInt(myuser.dcoins)+coins)
           console.log("onLoadPaymentData updated at: ", ctr++)
+          myuser.paystatus = true
           updateUser(myuser)
           history.push('/success')
           
