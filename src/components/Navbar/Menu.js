@@ -13,12 +13,13 @@ const Menu = ({updateUser}) =>{
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-      <Nav.Link href="#features">Features</Nav.Link>
+      <Nav.Link href="#features">About Us</Nav.Link>
       <Nav.Link href="http://localhost:3000/pricing">Pricing</Nav.Link>
       <NavDropdown title="Games" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Valorant</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">League Of Legends</NavDropdown.Item>
+        <NavDropdown.Item href="https://playvalorant.com/en-us/">Valorant</NavDropdown.Item>
         <NavDropdown.Divider />
+        <NavDropdown.Item href="https://www.leagueoflegends.com/en-us/?_gl=1*j17zia*_ga*MTc1Mjk1NDE1NS4xNjM0OTkxMTc1*_ga_FXBJE5DEDD*MTYzNDk5MTE3NC4xLjAuMTYzNDk5MTE3NC42MA..">League Of Legends</NavDropdown.Item>
+        
 
       </NavDropdown>
     </Nav>

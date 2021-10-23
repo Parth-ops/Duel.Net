@@ -1,7 +1,9 @@
 import React from 'react';
 import { useLocation } from "react-router";
 import axios from 'axios';
+import bgvid5 from '../vids/bgvid5.mp4'
 import { useState, useEffect } from 'react';
+import "./pays.css"
 
 const PaySuccess = ()=>{
 
@@ -32,8 +34,20 @@ const PaySuccess = ()=>{
     if(isLoaded && isSuccess)
     {
     return(
-        <div>
-            Payment Successful
+
+        <div className="mcontainer">
+          
+        <div className="wet">
+    <video autoPlay muted style={{ position: "absolute",
+    width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-16%)", height:"55%"
+    }}  >
+      <source src={bgvid5} type="video/mp4" />
+    </video>
+    </div>
+
+    <div className="bthome">
+<a  href="http://localhost:3000/"className="record">Back to Home page</a>
+</div>      
         </div>
     )
     }
