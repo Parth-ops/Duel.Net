@@ -5,7 +5,8 @@ import axios from 'axios'
 import bgvid2 from '../vids/bgvid2.mp4'
 
 
-const EditDetails =({updateUser}) => {var myuser = JSON.parse(localStorage.getItem("MyUser"))
+const EditDetails =({updateUser}) => {
+    var myuser = JSON.parse(localStorage.getItem("MyUser"))
      {
 
 
@@ -52,6 +53,25 @@ else{
 }
 }
 
+const delUser=(pass)=>
+{
+    
+    if(pass === myuser.password)
+    {
+        console.log(pass)
+        axios.post("http://localhost:9002/deluser", myuser).then(
+            res=>{
+                alert(res.data.message)
+                updateUser({})
+            }
+        )
+
+    }
+    else{
+        console.log("error pass")
+    }
+}
+
 
 const changePassword =(e) =>{
 e.preventDefault()
@@ -65,6 +85,9 @@ if (user.NewEnterPassword && user.cpassword)
         if(res.data.message === "Password changed, logging out...")
         {
             updateUser({})
+        }
+        else{
+            console.log("pass error")
         }
 
     })
@@ -124,12 +147,15 @@ width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-30%)", he
                                 <div className="pass">
                                     < button onClick={changePassword}className="butt" >Change password  </button>
                                 </div>
+
                         
                     </div>
                     <br/>
-               
+                    <p>Delete user account</p>
                     <div className="abs">
-                 
+
+                        <input type="password" id="deluserpass" placeholder="Current password"></input>
+                        <button onClick={(e)=>{e.preventDefault();delUser(document.getElementById("deluserpass").value)}}> Delete Account</button>
                     </div>
                     <br/>
                     
