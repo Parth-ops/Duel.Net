@@ -21,6 +21,7 @@ import Leaderboard from './components/Leaderboards/Leaderboard'
 import ViewTeams from './components/ViewTeams/ViewTeams';
 import Gpay from './components/pricing/Gpay'
 import PaySuccess from './components/pricing/PaySuccess'
+import AboutUs from './components/aboutus/abus'
 
 function App() {
 
@@ -159,6 +160,12 @@ function App() {
             <Route path="/success">
             {
                user && user._id ? user.paystatus ? < PaySuccess updateUser= { updateUser}   /> : <Homepage  updateUser= { updateUser} /> : <Login updateUser={updateUser} />
+            }
+            </Route>
+
+            <Route path="/aboutus">
+            {
+               user && user._id ? <AboutUs updateUser= { updateUser}  /> : <Login updateUser={updateUser}  />
             }
             </Route>
             </div>

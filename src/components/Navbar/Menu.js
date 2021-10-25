@@ -13,7 +13,7 @@ const Menu = ({updateUser}) =>{
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-      <Nav.Link href="#features">About Us</Nav.Link>
+      <Nav.Link href="http://localhost:3000/aboutus">About Us</Nav.Link>
       <Nav.Link href="http://localhost:3000/pricing">Pricing</Nav.Link>
       <NavDropdown title="Games" id="collasible-nav-dropdown">
         <NavDropdown.Item href="https://playvalorant.com/en-us/">Valorant</NavDropdown.Item>
