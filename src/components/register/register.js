@@ -4,6 +4,7 @@ import axios from "axios"
 import { useHistory } from "react-router-dom";
 import eyecon from "./eyecon.png"
 import { MdVisibility } from "react-icons/md";
+import swal from "sweetalert";
 
 const Register = () => {
 
@@ -58,20 +59,26 @@ const Register = () => {
             
                 axios.post("http://localhost:9002/register", user)
                 .then(res => {
-                    alert(res.data.message)
+                    swal(res.data.message)
                     history.push("/login")
                 })
              }
              else{
-                 alert("Enter a valid Password!")
+                 swal("Enter a valid Password!",{
+                     icon:"error"
+                 })
              }
             }
             else{
-                alert("Enter a valid E-mail ID")
+                swal("Enter a valid E-mail ID",{
+                    icon:"error"
+                })
             }
         }
         else{
-            alert("inavlid entry")
+            swal("inavlid entry",{
+                icon:'error'
+            })
         }
         
     }

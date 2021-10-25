@@ -4,6 +4,7 @@ import axios from 'axios';
 import Menu from '../Navbar/Menu';
 import regtbg from './regtbg.png'
 import "./regt.css"
+import swal from 'sweetalert';
 console.log("hi")
 const Regt=({updateUser}) =>{
 
@@ -37,14 +38,14 @@ const Regt=({updateUser}) =>{
         if(TeamName&&pid1&&pid2&&pid3&&pid4&&pid5){
             axios.post("http://localhost:9002/Regt", setT)
             .then(res => {
-                alert(res.data.message)
+                swal(res.data.message)
                 
             })
         
              
         }
         else{
-            alert("empty")
+            swal("empty")
         }
 
 

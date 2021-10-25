@@ -53,3 +53,16 @@ img {
     width: 100vw;
     height: 100vh;
 }
+.swal-overlay {
+    background-color: rgba(103, 88, 129, 0.589);
+    
+  }
+  .swal-modal {
+    background-color: #212529;
+    border: 3px solid blueviolet;
+    
+  }
+  .swal-text{
+      color: darkgrey;
+      font-size: 22px;
+  }  

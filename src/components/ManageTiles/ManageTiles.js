@@ -4,9 +4,15 @@ import "./ManageTiles.css"
 import val from './valo.jpg';
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import swal from 'sweetalert';
+
+
+
 
 
  const ManageTiles = (props,{updateUser})=>{
+       swal("Hello world!");
+       
        
        const sendData=()=>{
               history.push('/teams', {prop: props})
@@ -39,7 +45,7 @@ import axios from "axios";
        const updateTour=()=>{
               let teams;
               axios.post("http://localhost:9002/custom-t",props).then(res => {
-                     alert(res.data)
+                    //swal(res.data)
                      
                      teams = res.data
                      history.push('/custom-t',{prop: props, teamarr: teams})

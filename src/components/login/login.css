@@ -68,3 +68,10 @@
 h1 {
     font-size: 4rem;
 }
+.swal-modal{
+    background-color: white;
+}
+.swal-text{
+    color: black;
+    font-size: 22px;
+}  

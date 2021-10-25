@@ -4,6 +4,7 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { MdVisibility } from "react-icons/md";
 import bgvid from '../vids/bgvid.mp4'
+import swal from "sweetalert";
 
 
 const Login = ({ updateUser}) => {
@@ -33,7 +34,16 @@ const Login = ({ updateUser}) => {
     const login = () => {
         axios.post("http://localhost:9002/login", user)
         .then(res => {
-            alert(res.data.message)
+            if(res.data.message==='Login Successful'){
+            swal(res.data.message,{
+                icon:'success'
+            })
+        }else{
+            swal(res.data.message,{
+                icon:'error'
+            })
+
+        }
             updateUser(res.data.user)
             history.push("/")
         })

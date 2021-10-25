@@ -4,6 +4,7 @@ import axios from "axios"
 import './Bracket.css'
 import bbg from './bracketbg.png'
 import bgvid3 from '../vids/bgvid3.mp4'
+import swal from 'sweetalert';
 
 
 
@@ -58,7 +59,9 @@ const Bracket =  (props,{updateUser}) => {
         {
             if(coins<200)
         {
-            alert("Insufficient Funds!")
+            swal("Insufficient Funds!",{
+                icon:"warning"
+            })
         }
         else{
             try
@@ -66,7 +69,9 @@ const Bracket =  (props,{updateUser}) => {
             deductCoins()
             axios.post("http://localhost:9002/create-brack-valo", tour)
             .then(res => {
-                alert(res.data.message)
+                swal(res.data.message,{
+                    icon:'success'
+                })
                 window.location.reload()
             })
         }

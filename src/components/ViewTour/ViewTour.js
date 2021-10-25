@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import "./ViewTour.css";
 import { useLocation} from 'react-router';
 import axios from 'axios';
+import swal from 'sweetalert';
 
 
 
@@ -42,7 +43,7 @@ function loadR1(data_id)
     try{
       if((!loadData || !loadData[0].t1n) && data2.noft>8)
     {
-      alert('Brackets are not generated!')
+      swal('Brackets are not generated!')
     }
      else{
       for( var i=1;i<=15;i++){
@@ -71,7 +72,7 @@ function loadR1(data_id)
       
       }
       catch(err){
-        alert('Brackets are not generated!')
+        swal('Brackets are not generated!')
       }
   }
 

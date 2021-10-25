@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react'
 import "./ManageTour.css";
 import { useLocation} from 'react-router';
 import axios from 'axios';
-import { Alert } from 'react-bootstrap';
+import swal from 'sweetalert';
+
+
 
 
 
@@ -76,7 +78,7 @@ function loadR1(data_id)
     }
     console.log(daarra)
     axios.post("http://localhost:9002/brack-data-update", {id: data2.id, data:daarra, onload:false}).then(res => {
-      alert(res.data.message)
+     swal(res.data.message)
       
   })
 
@@ -93,7 +95,7 @@ function loadR1(data_id)
     try{
       if((!loadData || !loadData[0].t1n) && data2.noft>8)
       {
-        alert('Brackets are not generated!')
+       swal('Brackets are not generated!')
       }
       else{
       for( var i=1;i<=15;i++){
@@ -122,7 +124,7 @@ function loadR1(data_id)
       
       }
       catch(err){
-        alert('Brackets are not created!')
+       swal('Brackets are not created!')
       }
   }
 
