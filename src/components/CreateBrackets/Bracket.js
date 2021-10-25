@@ -70,9 +70,12 @@ const Bracket =  (props,{updateUser}) => {
             axios.post("http://localhost:9002/create-brack-valo", tour)
             .then(res => {
                 swal(res.data.message,{
-                    icon:'success'
+                    icon:'success',
+                    button:false
                 })
-                window.location.reload()
+                setTimeout(()=>{window.location.reload()}, 2000)
+               
+                
             })
         }
         catch(error)

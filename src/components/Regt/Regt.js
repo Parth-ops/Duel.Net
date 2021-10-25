@@ -38,7 +38,9 @@ const Regt=({updateUser}) =>{
         if(TeamName&&pid1&&pid2&&pid3&&pid4&&pid5){
             axios.post("http://localhost:9002/Regt", setT)
             .then(res => {
-                swal(res.data.message)
+                swal(res.data.message, {
+                    icon:"success"
+                })
                 
             })
         

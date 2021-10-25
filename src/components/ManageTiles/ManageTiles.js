@@ -11,7 +11,7 @@ import swal from 'sweetalert';
 
 
  const ManageTiles = (props,{updateUser})=>{
-       swal("Hello world!");
+       // swal("Hello world!");
        
        
        const sendData=()=>{

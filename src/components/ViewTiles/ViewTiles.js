@@ -4,6 +4,7 @@ import "./ViewTiles.css"
 import val from './valo.jpg';
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import swal from "sweetalert";
 
 
  const ViewTiles = (props,{updateUser})=>{
@@ -18,7 +19,7 @@ import axios from "axios";
 
               if (window.confirm('confirm to delete tournament '+ props.tn)){
                      axios.post("http://localhost:9002/deltour",dd).then(res => {
-                            alert(res.data.message)
+                            swal(res.data.message)
                             
                         })
 
@@ -35,7 +36,7 @@ import axios from "axios";
        const updateTour=()=>{
               let teams;
               axios.post("http://localhost:9002/custom-t",props).then(res => {
-                     alert(res.data)
+                     
                      
                      teams = res.data
                      history.push('/custom-tites',{prop: props, teamarr: teams})

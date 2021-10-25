@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import "./EditDetails.css" 
 import axios from 'axios'
-
+import swal from 'sweetalert';
 import bgvid2 from '../vids/bgvid2.mp4'
 
 
@@ -39,17 +39,23 @@ console.log(user)
 
     axios.post("http://localhost:9002/profile", {old:myuser, new:user})
     .then(res => {
-        alert(res.data.message)
-        if(res.data.message)
-        {
-            updateUser({})
-        }
+        swal(res.data.message, {
+            icon: "success",
+            button: false
+        })
+        setTimeout(()=>{if(res.data.message)
+            {
+                updateUser({})
+            }}, 2000)
+        
     })
 
 }
 else{
 
-    alert("username empty")
+    swal("username empty", {
+        icon: "error"
+    })
 }
 }
 
@@ -61,8 +67,10 @@ const delUser=(pass)=>
         console.log(pass)
         axios.post("http://localhost:9002/deluser", myuser).then(
             res=>{
-                alert(res.data.message)
-                updateUser({})
+                swal(res.data.message, {
+                    icon: "warning"
+                })
+               setTimeout(()=>{updateUser({})}, 2000)
             }
         )
 
@@ -81,7 +89,11 @@ if (user.NewEnterPassword && user.cpassword)
 
     axios.post("http://localhost:9002/profile", {old:myuser, new:user})
     .then(res => {
-        alert(res.data.message)
+        swal(res.data.message,{
+            icon:"warning",
+            button:false
+        })
+        setTimeout(()=>{
         if(res.data.message === "Password changed, logging out...")
         {
             updateUser({})
@@ -91,11 +103,14 @@ if (user.NewEnterPassword && user.cpassword)
         }
 
     })
+}, 2000)
 
 }
 else{
 
-    alert("Password empty")
+    swal("Password empty", {
+        icon:"error"
+    })
 }
 }
 
