@@ -12,7 +12,7 @@ import swal from 'sweetalert';
 
  const ManageTiles = (props,{updateUser})=>{
        // swal("Hello world!");
-       
+       const history = useHistory()
        
        const sendData=()=>{
               history.push('/teams', {prop: props})
@@ -22,7 +22,7 @@ import swal from 'sweetalert';
                hh:props.tn
         }
 
-       const history = useHistory()
+       
        const DelTour=()=>{
 
               if (window.confirm('confirm to delete tournament '+ props.tn)){

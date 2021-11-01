@@ -40,16 +40,16 @@ const AboutUs = ({updateUser}) => {
   
     <div className="abdescc">
     <div className="nandr">
-        <h1>Back End </h1><pre> - Parth Phalke</pre>
+        <h1>Full Stack </h1><pre> - Parth Phalke</pre>
     </div>
     <p>Student at Fr. Conceicao Rodrigues Institute of Technology </p>
-    <p>Data science and Web Dev enthusiast</p>
-    <p>Languages: C++,  C,  Python,  React</p>
-    <p className="wordsc">"Gaming is one of my hobbies and working on a project on gaming was even more fun. Learnt a lot about web development using the MERN stack."</p>
+    <p>Data Science and Web Dev enthusiast</p>
+    <p>Languages: Java,  C,  Python,  MERN</p>
+    <p className="wordsc">"Gaming is one of my hobbies and working on a project which involved gaming was even more fun. Learnt a lot about web development using the MERN stack."</p>
     <ul className ="contentinlist">
-    <li><a href="https://www.linkedin.com/in/sydney-gomes-994a9b18b/"><GrLinkedin/> </a> </li>    
-    <li><a href="https://github.com/aerodeval"><FaGithub/></a></li>
-    <li><a href="https://www.instagram.com/thatsydney/?hl=en"><GrInstagram/></a></li>
+    <li><a href="https://www.linkedin.com/in/parth-phalke-5855091a3/"><GrLinkedin/> </a> </li>    
+    <li><a href="https://github.com/Parth-ops"><FaGithub/></a></li>
+    <li><a href="https://www.instagram.com/parthphalke/?hl=en"><GrInstagram/></a></li>
     </ul>
     </div>
     <div className="col-md-1">
@@ -67,16 +67,16 @@ const AboutUs = ({updateUser}) => {
      </div>
     <div className="abdesc">
     <div className="nandr">
-        <h1>Back end </h1><pre> - Aldrich D'souza</pre>
+        <h1>Full Stack </h1><pre> - Aldrich D'souza</pre>
     </div>
     <p>Student at Fr. Conceicao Rodrigues Institute of Technology </p>
-    <p>Data science and Web Dev enthusiast</p>
-    <p>Languages: C++,  C,  Python,  React</p>
+    <p>Data Science and Web Dev enthusiast</p>
+    <p>Languages: C++,  C,  Python,  MERN</p>
     <p className="words">"Me along with my teammates learnt a lot about MERN stack through this project"</p>
     <ul className ="contentinlist">
-    <li><a href="https://www.linkedin.com/in/sydney-gomes-994a9b18b/"><GrLinkedin/> </a> </li>    
-    <li><a href="https://github.com/aerodeval"><FaGithub/></a></li>
-    <li><a href="https://www.instagram.com/thatsydney/?hl=en"><GrInstagram/></a></li>
+    <li><a href="https://www.linkedin.com/in/aldrich-dsouza-2b67741ba/"><GrLinkedin/> </a> </li>    
+    <li><a href="https://github.com/aldrich2002"><FaGithub/></a></li>
+    <li><a href="https://www.instagram.com/lrich_xo/?hl=en"><GrInstagram/></a></li>
     </ul>
     </div>
 </div>

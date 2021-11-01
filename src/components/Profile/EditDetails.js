@@ -160,7 +160,7 @@ width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-30%)", he
                             <input type="password" name="NewEnterPassword"  placeholder="Re-enter password" onChange={handleChange}></input>
                         </div>    
                                 <div className="pass">
-                                    < button onClick={changePassword}className="butt" >Change password  </button>
+                                    < button onClick={changePassword} id="chgp"className="butt" >Change password  </button>
                                 </div>
 
                         
@@ -170,7 +170,7 @@ width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-30%)", he
                     <div className="abs">
 
                         <input type="password" id="deluserpass" placeholder="Current password"></input>
-                        <button onClick={(e)=>{e.preventDefault();delUser(document.getElementById("deluserpass").value)}}> Delete Account</button>
+                        <button id="deluser" onClick={(e)=>{e.preventDefault();delUser(document.getElementById("deluserpass").value)}}> Delete Account</button>
                     </div>
                     <br/>
                     

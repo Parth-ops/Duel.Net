@@ -43,6 +43,7 @@ input {
 
 .butt {
     background-color: rgb(196, 50, 201);
+    
 }
 
 .display {
@@ -75,4 +76,19 @@ input {
     padding-left: 51px;
     padding-top: 69px;
     z-index: 1;
+}
+#deluser{
+    background-color: red;
+    width: 50%;
+    align-self: center;
+    margin-bottom: 5%;
+
+
+}
+#deluserpass{
+    width: 75%;
+    align-self: center;
+    margin-bottom: 5%;
+    padding-bottom: 2%;
+    
 }

@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { useLocation} from 'react-router';
+import { useHistory } from 'react-router';
 import axios from 'axios';
 import Menu from '../Navbar/Menu';
 import regtbg from './regtbg.png'
 import "./regt.css"
 import swal from 'sweetalert';
-console.log("hi")
+
+
 const Regt=({updateUser}) =>{
 
-    
+    const history = useHistory()
     const location = useLocation();
     console.log(location.state)
     const [ setT, setTT] = useState({
@@ -41,7 +43,7 @@ const Regt=({updateUser}) =>{
                 swal(res.data.message, {
                     icon:"success"
                 })
-                
+               setTimeout(()=>{ history.push('/')}, 2000)
             })
         
              

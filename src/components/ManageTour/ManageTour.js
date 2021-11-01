@@ -79,7 +79,7 @@ function loadR1(data_id)
     console.log(daarra)
     axios.post("http://localhost:9002/brack-data-update", {id: data2.id, data:daarra, onload:false}).then(res => {
      swal(res.data.message)
-      
+     setTimeout(window.location.reload(), 3000) 
   })
 
   }

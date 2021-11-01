@@ -76,7 +76,7 @@ const Register = () => {
             }
         }
         else{
-            swal("inavlid entry",{
+            swal("Invalid Password",{
                 icon:'error'
             })
         }

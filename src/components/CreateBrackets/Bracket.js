@@ -5,13 +5,13 @@ import './Bracket.css'
 import bbg from './bracketbg.png'
 import bgvid3 from '../vids/bgvid3.mp4'
 import swal from 'sweetalert';
-
+import { useHistory } from 'react-router';
 
 
 const Bracket =  (props,{updateUser}) => {
     var myuser = JSON.parse(localStorage.getItem("MyUser"))
 
-    
+    const history = useHistory()
 
     const [ tour, setTour] = useState({
         created_by: "",
@@ -70,10 +70,10 @@ const Bracket =  (props,{updateUser}) => {
             axios.post("http://localhost:9002/create-brack-valo", tour)
             .then(res => {
                 swal(res.data.message,{
-                    icon:'success',
-                    button:false
+                    icon:'success'
+                
                 })
-                setTimeout(()=>{window.location.reload()}, 2000)
+                setTimeout(()=>{ window.location.replace('/');}, 2000)
                
                 
             })

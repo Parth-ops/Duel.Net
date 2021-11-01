@@ -1,6 +1,6 @@
 import React from 'react'
 import { Navbar,  NavDropdown,  Nav, Container } from 'react-bootstrap';
-import { GiCrownCoin } from "react-icons/gi";
+import { GiCrownCoin, GiConsoleController } from "react-icons/gi";
 
 
 
@@ -9,7 +9,7 @@ const Menu = ({updateUser}) =>{
   return(
 <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
-  <Navbar.Brand href="http://localhost:3000/">DUEL.NET</Navbar.Brand>
+  <Navbar.Brand href="http://localhost:3000/"><GiConsoleController size={42}/>    DUEL.NET</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">

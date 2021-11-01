@@ -49,10 +49,10 @@ function ff() {
                <ul>
                
                       {Rp.map(function(t, index){
-                       return( <li key={ index } className="mind"> <h2>{index+1}</h2> 
+                       return( <li key={ index } className="mind"> <h2 className="index">{index+1}</h2> 
                        <pre>UserName: {t.gameName}</pre> 
-                       <pre>Ranked Rating:{t.rankedRating}  </pre>
-                       <pre>No. of wins:{t.numberOfWins}  </pre>
+                       <pre>Ranked Rating: {t.rankedRating}  </pre>
+                       <pre>No. of wins: {t.numberOfWins}  </pre>
                         
                     
                        
