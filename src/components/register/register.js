@@ -9,7 +9,9 @@ import swal from "sweetalert";
 const Register = () => {
 
     const history = useHistory()
-    
+    const [css,setcss]= useState({
+        visibility: "hidden"
+    })
     const [showpass, setshow] = useState(false)
     const togglePass = () => setshow(!showpass);
     const showPassword = {
@@ -45,7 +47,10 @@ const Register = () => {
         var re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/;
         return re.test(pass);
     }
-
+    function showRules(){
+        setcss({  visibility: "visible"})
+    }
+    
     
 
     const register = () => {
@@ -93,8 +98,11 @@ const Register = () => {
         <input type="text" name="name" value={user.name} placeholder="Your User-Name" onChange={handleChange} ></input>
         <input type="text" name="email" value={user.email} placeholder="Your E-mail" onChange={handleChange}></input>
         <div className="redhot">
-            <input id="pass" className="inputr" type={showPassword.passStat} name="password" value={user.password} placeholder="Your password"  onChange={handleChange} ></input>
+            <input onMouseOut={()=>setcss({visibility:"hidden"})} onMouseOver={()=>showRules()} id="pass" className="inputr" type={showPassword.passStat} name="password" value={user.password} placeholder="Your password"  onChange={handleChange} ></input>
+            
             < MdVisibility onMouseOver={togglePass}  onMouseOut={togglePass}/>
+            <div className="col-5" style={css}> <p className="small" > Your password MUST have at least one LOWERCASE character. <br/>
+            Your password MUST have at least one number.<br/>Your password MUST have at least one Special character </p></div>
         </div>
         <div className="redhot">
         <input  className="inputr" type="password" name="reEnterPassword" value={user.reEnterPassword} placeholder="Re-enter password" onChange={handleChange}></input>

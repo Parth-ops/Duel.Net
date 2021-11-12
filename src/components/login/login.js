@@ -45,7 +45,7 @@ const Login = ({ updateUser}) => {
 
         }
             updateUser(res.data.user)
-            history.push("/")
+            history.push("/home")
         })
     }
 

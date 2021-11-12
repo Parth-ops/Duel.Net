@@ -1,19 +1,19 @@
-
+import { useHistory } from "react-router";
 import React from "react";
 import "./home.css"
 
 
-const home = ({updateUser}) => {
-
+const Home = ({updateUser}) => {
+const history=useHistory()
     return(
 
  <div>
-     
-
-
-
-<h1 class="title">Dual.net</h1>
-<p>for gamers, by gamers.</p>
+      
+    <section className="lolman">
+        <a className="andmat" onClick={()=>history.push("/login")} class="titler">Dual.net</a>
+        <p>for gamers, by gamers.</p>
+    </section>
+   
 
 
   </div>
@@ -23,4 +23,4 @@ const home = ({updateUser}) => {
 
     )
 }
-export default home
+export default Home

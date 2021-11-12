@@ -1,71 +1,27 @@
-:root {
-    --gradient: linear-gradient(90deg, #ee6352, #d65db1, purple, #ffc75f);
+/* @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+a {
+    font-size: 10rem;
+    text-decoration: none
 }
 
-body {
-    margin: 0;
-    font-family: 'Promt', sans-serif;
-    color: #860022;
-    background: #979191;
+.titler:hover {
+    transform: scale(1.2);
+    color: #8c45e9;
 }
 
-section {
+.titler {
+    transform: scale(1);
+    transition: transform 0.7s ease;
+    color: #eb3075;
+}
+
+.lolman {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100px;
-    padding: 100px 20vw;
-}
-
-.spacer {
-    aspect-ratio: 300/50;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-h1 {
-    font-size: 19rem;
-}
-
-p {
-    font-size: 19px;
-}
-
-.layer1 {
-    background-image: url('./layer1.svg');
-}
-
-.layer2 {
-    background-image: url('./layer2.svg');
-}
-
-.title {
-    margin: 0 0 .5em;
-    font-weight: 900;
-    color: #ee6352;
-    line-height: .8;
-    margin: 0;
-    background-image: var(--gradient);
-    -webkit-background-clip: text;
-    color: transparent;
-    background-size: 300%;
-    animation: bg-animation 5s infinite alternate;
-}
-
-@keyframes bg-animation {
-    0% {
-        background-position: left
-    }
-    50% {
-        background-position: right
-    }
-    100% {
-        background-position: left
-    }
-}
-
-.title:hover {
-    background-position: right;
-}
+    padding: 320px 20vw;
+    height: 30vh;
+    padding-top: 10%;
+} */

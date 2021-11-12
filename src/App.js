@@ -22,6 +22,7 @@ import ViewTeams from './components/ViewTeams/ViewTeams';
 import Gpay from './components/pricing/Gpay'
 import PaySuccess from './components/pricing/PaySuccess'
 import AboutUs from './components/aboutus/abus'
+import Home from './components/home/Home.js'
 
 function App() {
 
@@ -50,6 +51,9 @@ function App() {
 
     <Router>
       <Switch>
+           <Route exact path="/">
+              <Home/>
+            </Route>
             <Route path="/login">
               <Login updateUser={updateUser}/>
             </Route>
@@ -66,7 +70,7 @@ function App() {
     
       
         
-          <Route exact path="/">
+          <Route exact path="/home">
             {
               user && user._id ? <Homepage  updateUser= { updateUser} /> : <Login updateUser={updateUser} />
             }
