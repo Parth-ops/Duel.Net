@@ -10,7 +10,7 @@ const history=useHistory()
  <div>
       
     <section className="lolman">
-        <a className="andmat" onClick={()=>history.push("/login")} class="titler">Dual.net</a>
+        <a className="titler" onClick={()=>history.push("/login")} >Dual.net</a>
         <p>for gamers, by gamers.</p>
     </section>
    

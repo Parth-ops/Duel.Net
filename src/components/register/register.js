@@ -101,7 +101,7 @@ const Register = () => {
             <input onMouseOut={()=>setcss({visibility:"hidden"})} onMouseOver={()=>showRules()} id="pass" className="inputr" type={showPassword.passStat} name="password" value={user.password} placeholder="Your password"  onChange={handleChange} ></input>
             
             < MdVisibility onMouseOver={togglePass}  onMouseOut={togglePass}/>
-            <div className="col-5" style={css}> <p className="small" > Your password MUST have at least one LOWERCASE character. <br/>
+            <div  style={css}> <p className="small" > Your password MUST have at least one LOWERCASE character. <br/>
             Your password MUST have at least one number.<br/>Your password MUST have at least one Special character </p></div>
         </div>
         <div className="redhot">
