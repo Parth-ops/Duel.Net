@@ -57,7 +57,7 @@ function App() {
               <Register />
             </Route>
    
-            <div className="mainsc">
+            <div className="mainsc ">
 
             {
               user && user._id ? <Menu  updateUser= { updateUser} /> : null

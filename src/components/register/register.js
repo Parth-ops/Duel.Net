@@ -96,7 +96,10 @@ const Register = () => {
             <input id="pass" className="inputr" type={showPassword.passStat} name="password" value={user.password} placeholder="Your password"  onChange={handleChange} ></input>
             < MdVisibility onMouseOver={togglePass}  onMouseOut={togglePass}/>
         </div>
-        <input type="password" name="reEnterPassword" value={user.reEnterPassword} placeholder="Re-enter password" onChange={handleChange}></input>
+        <div className="redhot">
+        <input  className="inputr" type="password" name="reEnterPassword" value={user.reEnterPassword} placeholder="Re-enter password" onChange={handleChange}></input>
+        < MdVisibility onMouseOver={togglePass}  onMouseOut={togglePass}/>
+        </div>
         <div className="button" onClick={register}>Register</div>
         <div>or</div>
         <div className="button" onClick={() => history.push("/login")}>Login</div>
