@@ -54,7 +54,7 @@ width:"100%",left:"50%", objectFit:"cover",transform: "translate(-50%,-20%)", he
         </ul>
     </div>  
 </div>
-{/* <button href="http://localhost:3000/gpay">Click Me</button> */}
+{/* <button href="https://dualnetwebapp.herokuapp.com/gpay">Click Me</button> */}
 </div>
 
 

@@ -26,7 +26,7 @@ import swal from 'sweetalert';
        const DelTour=()=>{
 
               if (window.confirm('confirm to delete tournament '+ props.tn)){
-                     axios.post("http://localhost:9002/deltour",dd).then(res => {
+                     axios.post("https://dualnetwebapp.herokuapp.com/deltour",dd).then(res => {
                             
                             window.location.reload();
                             
@@ -44,7 +44,7 @@ import swal from 'sweetalert';
 
        const updateTour=()=>{
               let teams;
-              axios.post("http://localhost:9002/custom-t",props).then(res => {
+              axios.post("https://dualnetwebapp.herokuapp.com/custom-t",props).then(res => {
                     //swal(res.data)
                      
                      teams = res.data

@@ -19,7 +19,7 @@ const PaySuccess = ({updateUser})=>{
 
     function paymentUpdate()
     {
-        axios.post("http://localhost:9002/success", myuser).then(
+        axios.post("https://dualnetwebapp.herokuapp.com/success", myuser).then(
             res=>{
                     if(res.data.message === "failed")
                     {
@@ -48,7 +48,7 @@ const PaySuccess = ({updateUser})=>{
     </div>
 
     <div className="bthome">
-<button  className="record" onClick={()=>{ history.push("/"); myuser.paystatus = false; updateUser(myuser)}}>Back to Home page</button>
+<button  className="record" onClick={()=>{ history.push("/home"); myuser.paystatus = false; updateUser(myuser)}}>Back to Home page</button>
 </div>      
         </div>
     )

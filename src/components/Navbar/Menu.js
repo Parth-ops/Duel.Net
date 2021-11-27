@@ -1,20 +1,22 @@
 import React from 'react'
 import { Navbar,  NavDropdown,  Nav, Container } from 'react-bootstrap';
 import { GiCrownCoin, GiConsoleController } from "react-icons/gi";
-
-
+import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router';
 
 const Menu = ({updateUser}) =>{
+  
+  const history = useHistory()
   var myuser = JSON.parse(localStorage.getItem("MyUser"))
   return(
 <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
-  <Navbar.Brand href="http://localhost:3000/home"><GiConsoleController size={42}/>    DUEL.NET</Navbar.Brand>
+  <Navbar.Brand onClick={()=>{history.push('/home')}}><GiConsoleController size={42}/>    DUEL.NET</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-      <Nav.Link href="http://localhost:3000/aboutus">About Us</Nav.Link>
-      <Nav.Link href="http://localhost:3000/pricing">Pricing</Nav.Link>
+      <Nav.Link onClick={()=>{history.push('/aboutus')}}>About Us</Nav.Link> 
+      <Nav.Link onClick={()=>{history.push('/pricing')}}>Pricing</Nav.Link>
       <NavDropdown title="Games" id="collasible-nav-dropdown">
         <NavDropdown.Item href="https://playvalorant.com/en-us/">Valorant</NavDropdown.Item>
         <NavDropdown.Divider />
@@ -24,9 +26,9 @@ const Menu = ({updateUser}) =>{
       </NavDropdown>
     </Nav>
     <Nav>
-    <Nav.Link className="coins" id="coin" href="http://localhost:3000/pricing">{myuser.dcoins} <GiCrownCoin/></Nav.Link>
+    <Nav.Link className="coins" id="coin" onClick={()=>{history.push('/pricing')}}>{myuser.dcoins} <GiCrownCoin/></Nav.Link>
       <Nav.Link className="button" onClick={() => updateUser({})}>Logout</Nav.Link>
-      <Nav.Link eventKey={2} href="http://localhost:3000/profile">
+      <Nav.Link onClick={()=>{history.push('/profile')}}>
         Welcome {myuser.name}
       </Nav.Link>
     </Nav>

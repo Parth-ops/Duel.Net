@@ -18,7 +18,7 @@ const ManageTour =({updateUser}) => {
 
 function loadR1(data_id)
 {
-  axios.post("http://localhost:9002/brack-data", data_id).then(res => {
+  axios.post("https://dualnetwebapp.herokuapp.com/brack-data", data_id).then(res => {
   // console.log(res.data)
   loadData = res.data;
     
@@ -77,7 +77,7 @@ function loadR1(data_id)
 
     }
     console.log(daarra)
-    axios.post("http://localhost:9002/brack-data-update", {id: data2.id, data:daarra, onload:false}).then(res => {
+    axios.post("https://dualnetwebapp.herokuapp.com/brack-data-update", {id: data2.id, data:daarra, onload:false}).then(res => {
      swal(res.data.message)
      setTimeout(window.location.reload(), 3000) 
   })

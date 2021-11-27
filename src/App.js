@@ -22,7 +22,7 @@ import ViewTeams from './components/ViewTeams/ViewTeams';
 import Gpay from './components/pricing/Gpay'
 import PaySuccess from './components/pricing/PaySuccess'
 import AboutUs from './components/aboutus/abus'
-import Home from './components/home/Home.js'
+import Home from './components/home/Home'
 
 function App() {
 

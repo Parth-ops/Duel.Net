@@ -37,7 +37,7 @@ console.log(user)
     if (user.name) 
 {
 
-    axios.post("http://localhost:9002/profile", {old:myuser, new:user})
+    axios.post("https://dualnetwebapp.herokuapp.com/profile", {old:myuser, new:user})
     .then(res => {
         swal(res.data.message, {
             icon: "success",
@@ -65,7 +65,7 @@ const delUser=(pass)=>
     if(pass === myuser.password)
     {
         console.log(pass)
-        axios.post("http://localhost:9002/deluser", myuser).then(
+        axios.post("https://dualnetwebapp.herokuapp.com/deluser", myuser).then(
             res=>{
                 swal(res.data.message, {
                     icon: "warning"
@@ -87,7 +87,7 @@ e.preventDefault()
 if (user.NewEnterPassword && user.cpassword) 
 {
 
-    axios.post("http://localhost:9002/profile", {old:myuser, new:user})
+    axios.post("https://dualnetwebapp.herokuapp.com/profile", {old:myuser, new:user})
     .then(res => {
         swal(res.data.message,{
             icon:"warning",

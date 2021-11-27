@@ -24,7 +24,7 @@ const Megt = ({updateUser}) => {
     const [gg, setgg] = useState([])
     function GetReq()
     {
-    axios.post("http://localhost:9002/manage-t", myuser).then(res => setgg(res.data))
+    axios.post("https://dualnetwebapp.herokuapp.com/manage-t", myuser).then(res => setgg(res.data))
     }
     
    useEffect(() =>{

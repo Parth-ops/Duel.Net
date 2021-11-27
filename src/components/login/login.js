@@ -32,7 +32,7 @@ const Login = ({ updateUser}) => {
     }
 
     const login = () => {
-        axios.post("http://localhost:9002/login", user)
+        axios.post("https://dualnetwebapp.herokuapp.com/login", user)
         .then(res => {
             if(res.data.message==='Login Successful'){
             swal(res.data.message,{

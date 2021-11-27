@@ -21,7 +21,7 @@ const Compete = ({updateUser}) => {
 
     function GetReq()
     {
-    axios.get("http://localhost:9002/compete").then(res => setgg(res.data))
+    axios.get("https://dualnetwebapp.herokuapp.com/compete").then(res => setgg(res.data))
 
     }
     

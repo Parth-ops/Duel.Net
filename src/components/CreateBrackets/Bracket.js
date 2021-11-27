@@ -35,7 +35,7 @@ const Bracket =  (props,{updateUser}) => {
     }
 
     function deductCoins(){
-            axios.post("http://localhost:9002/deduct", myuser).then(
+            axios.post("https://dualnetwebapp.herokuapp.com/deduct", myuser).then(
                 res=>{
                     if(res.data.message)
                     {
@@ -67,13 +67,13 @@ const Bracket =  (props,{updateUser}) => {
             try
             {
             deductCoins()
-            axios.post("http://localhost:9002/create-brack-valo", tour)
+            axios.post("https://dualnetwebapp.herokuapp.com/create-brack-valo", tour)
             .then(res => {
                 swal(res.data.message,{
                     icon:'success'
                 
                 })
-                setTimeout(()=>{ window.location.replace('/');}, 2000)
+                setTimeout(()=>{ window.location.replace('/home');}, 2000)
                
                 
             })

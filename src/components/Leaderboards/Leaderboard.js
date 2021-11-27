@@ -16,7 +16,7 @@ const Leaderboard = ({updateUser}) =>{
 
  
 function ff() { 
-    axios.post('http://localhost:9002/leaderboard').then(res=>{
+    axios.post('https://dualnetwebapp.herokuapp.com/leaderboard').then(res=>{
         console.log(res.data.content_data)
         setRP(res.data.content_data.players)
         setloading(false)

@@ -17,7 +17,7 @@ const ViewTour =({updateUser}) => {
   
 function loadR1(data_id)
 {
-  axios.post("http://localhost:9002/brack-data", data_id).then(res => {
+  axios.post("https://dualnetwebapp.herokuapp.com/brack-data", data_id).then(res => {
   // console.log(res.data)
   loadData = res.data;
     

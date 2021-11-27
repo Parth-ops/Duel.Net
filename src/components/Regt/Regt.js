@@ -38,12 +38,12 @@ const Regt=({updateUser}) =>{
         e.preventDefault();
          const{TeamName,pid1,pid2,pid3,pid4,pid5,cid }=setT
         if(TeamName&&pid1&&pid2&&pid3&&pid4&&pid5){
-            axios.post("http://localhost:9002/Regt", setT)
+            axios.post("https://dualnetwebapp.herokuapp.com/Regt", setT)
             .then(res => {
                 swal(res.data.message, {
                     icon:"success"
                 })
-               setTimeout(()=>{ history.push('/')}, 2000)
+               setTimeout(()=>{ history.push('/home')}, 2000)
             })
         
              

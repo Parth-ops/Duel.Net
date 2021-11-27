@@ -62,7 +62,7 @@ const Register = () => {
                 if(validatePass(password))
                 {
             
-                axios.post("http://localhost:9002/register", user)
+                axios.post("https://dualnetwebapp.herokuapp.com/register", user)
                 .then(res => {
                     swal(res.data.message)
                     history.push("/login")
